@@ -23,6 +23,7 @@
             position: fixed;
             top:0;
             left: 0;
+            z-index: 1000;
         }
         .wrap{
             width: 1200px;
@@ -43,6 +44,7 @@
             margin-bottom: 10px;
         }
         .swiper-container {
+            display: inline-block;
             width: 60%;
             height: 45px;
             margin-left: -25px;
@@ -78,12 +80,37 @@
             font-size: 14px;
             color: #757474;
         }
+        header .search {
+            float: right;
+            width: 220px;
+            height:40px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        header .search #tSearch{
+            width: 150px;
+            height:30px;
+            border:1px solid #00AA98;
+            float: left;
+        }
+        header .search button{
+            display: inline-block;
+            float: left;
+            width: 40px;
+            height:32px;
+            background-color: #00AA98;
+            /*background: url("http://www.7006.top/style/images/btn-msearch.png");*/
+            border: none;
+            margin-left: -5px;
+        }
         /*//////////////////大轮播图//////////////////*/
+
 
         #aboutShow{
             overflow: hidden;
             width: 820px;
             height: 365px;
+
         }
         #showDiv {
             float: left;
@@ -132,7 +159,81 @@
             text-decoration: none;
             /*opacity: 1;*/
         }
-        /*////////////////////////////////////////////////*/
+        .section1 .diguo{
+            margin-top: 20px;
+        }
+        .section1 .diguo .thereport{
+            margin-left: 20px;
+        }
+        .section1 .diguo .longmark{
+            margin-top: 10px;
+        }
+        /*///////////////////----------section2-------------////////////////////*/
+        .section2{
+            margin-top: 25px;
+        }
+        .section2 .read{
+            width: 820px;
+            height:24px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom:3px solid #F5F5F5
+        }
+        .section2 .read span::before{
+            content: url("http://www.7006.top/style/images/symbol-4.png");
+            position: relative;
+            top:1px;
+            left: -2px;
+        }
+        .section2 .read span{
+            line-height: 22px;
+            height:22px;
+            margin-left: 3px;
+            padding-bottom: 9px;
+            font-size: 18px;
+            color: #3C3B3C;
+            border-bottom: 3px solid #00AA98;
+        }
+        .section2 .readDiv{
+            overflow: hidden;
+            margin-top: 20px;
+            width: 820px;
+        }
+        .section2 .readDiv .readSmallDiv{
+            float: left;
+            width: 385px;
+            height: 87px;
+            margin-bottom: 20px;
+            margin-right: 5px;
+            background-color: #F3F8FC;
+            padding: 10px;
+        }
+        .section2 .readDiv .readSmallDiv Img{
+            float: left;
+            width: 130px;
+            height:85px;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle{
+            float: left;
+            width: 240px;
+            margin-left: 5px;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle h3 a{
+            text-decoration: none;
+            font-size: 16px;
+            color: #000;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle h3:hover{
+            background-color: #00AA98;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle h3:hover a{
+            color: #fff;;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle p{
+            margin-top:10px;
+            color: #676666;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -176,8 +277,12 @@
                     </div>
                 </div>
             </div>
+            <div class="search">
+                <input type="text" id="tSearch">
+                <button><img src="http://www.7006.top/style/images/btn-msearch.png" alt=""></button>
+            </div>
         </header>
-        <section1>
+        <section class="section1">
             <div id="aboutShow">
                 <div id="showDiv">
                     <a href="" id="showA"><img src="http://www.7006.top/d/file/view/opinion/2015-03-28/e8b145230d480caab9878fa665d1e96a.jpg" alt="" id="showImg"></a>
@@ -200,14 +305,33 @@
                 <div class="news"></div>
                 <div class="news"></div>
             </div>
-        </section1>
-        <section2></section2>
-        <section3></section3>
+            <div class="diguo">
+                <img src="img/帝国cms.jpg" alt="">
+                <img src="img/thereport.jpg" alt="" class="thereport">
+                <img src="img/longmark.jpg" alt="" class="longmark">
+            </div>
+        </section>
+        <section class="section2">
+            <div class="read">
+                <span>精选导读</span>
+            </div>
+            <div class="readDiv" id="readDiv">
+                <!--<div class="readSmallDiv">-->
+                    <!--<img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/c0787f3a1fe29c07f9ccd86b7c474fb7.jpg" alt="">-->
+                    <!--<div class="readTitle">-->
+                        <!--<h3><a href="http://www.7006.top/news/shouyou/475.html">开炮，全球首款小游戏社交APP正式上线</a></h3>-->
+                        <!--<p>由鲲磐网络自主研发的全球首款小游戏社交APP“开炮”正式上线，将陌生人社交...</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </section>
+        <section class="section3"></section>
     </div>
 </div>
 <script src="js/swiper.min.js"></script>
 <script src="js/ajax.js"></script>
 <script type="text/javascript">
+    var readDiv = document.getElementById("readDiv");
     var swiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
         centeredSlides: true,
@@ -220,7 +344,75 @@
         var isJson = JSON.parse(data);
 //        console.log(isJson.swiper[0].imgSrc);
         console.log(isJson);
+        /////////////////动态创建精选导读////////////////////////
+        for (var i =0;i<isJson.introduction.length;i++){
+            createReadDiv(isJson.introduction[i].img,isJson.introduction[i].title,isJson.introduction[i].content);
+        }
+
     })
+    //////////////////////// 大轮播图 /////////////////////////
+    var choose = document.getElementsByClassName("choose");
+    var showImg = document.getElementById("showImg");
+    var showA= document.getElementById("showA");
+    var showImgTextA= document.getElementById("showImgTextA");
+    var dataSw = [{imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/e8b145230d480caab9878fa665d1e96a.jpg",bigHref:"http://www.7006.top/view/opinion/605.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/5b39914316a2b88ab3f03011eafacd3f.jpg",bigHref:"http://www.7006.top/view/opinion/604.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/084bd9fcdbbe1742387819da96e879e7.jpg",bigHref:"http://www.7006.top/view/opinion/603.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/da58e2faca45f87be541e957295bd792.jpg",bigHref:"http://www.7006.top/view/opinion/602.html"}
+    ];
+    
+    for (var i = 0;i<choose.length;i++){
+        choose[i].onmouseover = (function (i) {
+            return  function () {
+                showImg.src = dataSw[i].imgSrc;
+                showA.href = dataSw[i].bigHref;
+                showImgTextA.innerHTML = choose[i].innerHTML;
+                showImgTextA.href = dataSw[i].bigHref;
+                for(var j = 0;j< choose.length;j++){
+                    choose[j].style.opacity = 0.7;
+                }
+                choose[i].style.opacity = 1;
+            }
+        })(i)
+    }
+    var timerBigShow = null;
+    var bigShowindex = 1;
+    timerBigShow = setInterval(function () {
+        if (bigShowindex >= 4){
+            bigShowindex = 0
+        }
+        for(var i = 0;i <choose.length;i++){
+            choose[i].style.opacity = 0.7;
+        }
+        showImg.src = dataSw[bigShowindex].imgSrc;
+        showImgTextA.innerHTML = choose[bigShowindex].innerHTML;
+        showImg.src = dataSw[bigShowindex].imgSrc;
+        showImgTextA.href = dataSw[bigShowindex].bigHref;
+        choose[bigShowindex].style.opacity = 1;
+        bigShowindex++;
+    },2000)
+
+    /////////////////动态创建精选导读////////////////////////
+    function createReadDiv(img,title,content) {
+        var smallDiv = document.createElement("div");
+        smallDiv.setAttribute("class","readSmallDiv");
+        var smallImg = new Image();
+        smallImg.src = img;
+        var smallTitle = document.createElement("div");
+        smallTitle.setAttribute("class","readTitle");
+        var smallH3 = document.createElement("h3");
+        var smallA = document.createElement("a");
+        smallA.href="http://www.7006.top/news/shouyou/475.html";
+        smallA.innerHTML=title;
+        var smallP = document.createElement("p");
+        smallP.innerHTML=content;
+        smallH3.appendChild(smallA);
+        smallTitle.appendChild(smallH3);
+        smallTitle.appendChild(smallP);
+        smallDiv.appendChild(smallImg);
+        smallDiv.appendChild(smallTitle);
+        readDiv.appendChild(smallDiv);
+    }
 </script>
 </body>
 </html>
