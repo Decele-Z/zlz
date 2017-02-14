@@ -25,7 +25,7 @@
             left: 0;
         }
         .wrap{
-            width: 85%;
+            width: 1200px;
             background-color: white;
             padding: 20px;
             margin:0 auto;
@@ -40,6 +40,7 @@
             background: url("http://www.7006.top/style/images/latestnews-title.png") no-repeat 10px 10px;
             border: 1px solid #F4F3F3;
             overflow: hidden;
+            margin-bottom: 10px;
         }
         .swiper-container {
             width: 60%;
@@ -77,6 +78,61 @@
             font-size: 14px;
             color: #757474;
         }
+        /*//////////////////大轮播图//////////////////*/
+
+        #aboutShow{
+            overflow: hidden;
+            width: 820px;
+            height: 365px;
+        }
+        #showDiv {
+            float: left;
+            position: relative;
+        }
+        #showImg{
+            width: 670px;
+            height: 365px;
+        }
+        #chooseImg{
+            float: right;
+            list-style: none;
+        }
+        #chooseImg li{
+            color: white;
+            /*text-align: center;*/
+            padding: 4px;
+            padding-right: 0;
+            margin-top: -2px;
+        }
+        .choose{
+            width: 120px;
+            height: 72px;
+            /*text-align: center;*/
+            font-size: 14px;
+            opacity: 0.7;
+            /*text-indent: 1em;*/
+            padding: 7px 10px;
+            font-weight: bold;
+        }
+        #showImgText{
+            width: 650px;
+            height: 45px;
+            padding-left: 20px;
+            background-color: rgba(0,0,0,0.5);
+            /*opacity: 0.5;*/
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            /*text-align: center;*/
+            line-height: 45px;
+
+        }
+        #showImgText a{
+            color: white;
+            text-decoration: none;
+            /*opacity: 1;*/
+        }
+        /*////////////////////////////////////////////////*/
     </style>
 </head>
 <body>
@@ -121,12 +177,36 @@
                 </div>
             </div>
         </header>
-        <section1></section1>
+        <section1>
+            <div id="aboutShow">
+                <div id="showDiv">
+                    <a href="" id="showA"><img src="http://www.7006.top/d/file/view/opinion/2015-03-28/e8b145230d480caab9878fa665d1e96a.jpg" alt="" id="showImg"></a>
+                    <div id="showImgText"><a href="" id="showImgTextA">莆田系与百度百亿级大内讧</a></div>
+                </div>
+                <ul id="chooseImg">
+                    <li><div class="choose" style="background-color:#08a7b9; opacity: 1">莆田系与百度百亿级大内讧</div></li>
+                    <li><div class="choose" style="background-color:#e5611d">马云正在威胁国家安全？</div></li>
+                    <li><div class="choose" style="background-color:#c75663">中国的互联网带来的一场新革命</div></li>
+                    <li><div class="choose" style="background-color:#588753">互联网让中国经济飞起来！</div></li>
+                </ul>
+            </div>
+            <div id="dadlyNews">
+                <div id="newsTitle">
+
+                </div>
+                <div class="news"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+            </div>
+        </section1>
         <section2></section2>
         <section3></section3>
     </div>
 </div>
 <script src="js/swiper.min.js"></script>
+<script src="js/ajax.js"></script>
 <script type="text/javascript">
     var swiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
@@ -136,6 +216,11 @@
         direction: 'vertical',
         loop:true
     });
+    ajax("post","http://localhost/zlz/index/route.php","type=0",function (data) {
+        var isJson = JSON.parse(data);
+//        console.log(isJson.swiper[0].imgSrc);
+        console.log(isJson);
+    })
 </script>
 </body>
 </html>
