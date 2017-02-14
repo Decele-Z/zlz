@@ -23,6 +23,7 @@
             position: fixed;
             top:0;
             left: 0;
+            z-index: 1000;
         }
         .wrap{
             width: 1200px;
@@ -79,11 +80,20 @@
             color: #757474;
         }
         /*//////////////////大轮播图//////////////////*/
+        .section1{
+            overflow: hidden;
+            /*clear: both;*/
+            /*height: 365px;*/
+            /*width:1200px;*/
+        }
+        
 
         #aboutShow{
             overflow: hidden;
             width: 820px;
             height: 365px;
+            /*左浮动*/
+            float: left;
         }
         #showDiv {
             float: left;
@@ -133,6 +143,93 @@
             /*opacity: 1;*/
         }
         /*////////////////////////////////////////////////*/
+
+        #dadlyNews{
+            float: left;
+            margin-left: 10px;
+            width:360px;
+        }
+        #newsTitle{
+            font-size: 20px;
+            height: 30px;
+            line-height: 30px;
+            /*text-indent: 2em;*/
+            border-bottom: 3px solid #00AA98 ;
+            margin-bottom: 20px;
+        }
+        #newsTitle::before{
+            content: url(toutiao.png);
+        }
+        .grayline{
+            width:240px;
+            height: 3px;
+            background-color: lightgray;
+            float: right;
+            position: relative;
+            top:30px;
+        }
+        .news1{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 0;
+            width: 20px;
+            height: 20px;
+        }
+        .news2{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 -36px;
+            width: 20px;
+            height: 20px;
+        }
+        .news3{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 -71px;
+            width: 20px;
+            height: 20px;
+        }
+        .news4{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 -107px;
+            width: 20px;
+            height: 20px;
+        }
+        .news5{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 -144px;
+            width: 20px;
+            height: 20px;
+        }
+        .news{
+            width:360px;
+            /*height:25px;*/
+            line-height: 25px;
+            margin-top: 20px;
+            text-indent: 1.3em;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .content{
+            width:360px;
+            font-size: 12px;
+            height:0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        #content5{
+            height: 75px;
+        }
+        .title:hover{
+            color:aquamarine;
+        }
+
     </style>
 </head>
 <body>
@@ -177,7 +274,7 @@
                 </div>
             </div>
         </header>
-        <section1>
+        <section class="section1">
             <div id="aboutShow">
                 <div id="showDiv">
                     <a href="" id="showA"><img src="http://www.7006.top/d/file/view/opinion/2015-03-28/e8b145230d480caab9878fa665d1e96a.jpg" alt="" id="showImg"></a>
@@ -191,23 +288,164 @@
                 </ul>
             </div>
             <div id="dadlyNews">
-                <div id="newsTitle">
 
+                    <div id="newsTitle">
+                        今日头条
+                        <div class="grayline"></div>
+                    </div>
+                <div id="dad" class="dad">
+                    <div class="news">
+
+                        <div class="title"><span class="news1"></span>血仍未冷历久而新，一个纸媒逃兵的</div>
+                        <div id="content1" class="content">
+                            有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                            走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                            似乎要刹那被抽...
+                        </div>
+                    </div>
                 </div>
-                <div class="news"></div>
-                <div class="news"></div>
-                <div class="news"></div>
-                <div class="news"></div>
-                <div class="news"></div>
+                <div id="dad1" class="dad">
+                    <div class="news">
+
+                        <div class="title"><span class="news2"></span>Windows 10免费的背后：微软有颗骚</div>
+                    <div id="content2" class="content">
+                        有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                        走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                        似乎要刹那被抽...
+                    </div>
+                    </div>
+                </div>
+                <div id="dad2" class="dad">
+                    <div class="news">
+
+                        <div class="title"><span class="news3"></span>看巨头齐聚IT领袖峰会，云计算才是</div>
+                    <div id="content3" class="content">
+                        有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                        走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                        似乎要刹那被抽...
+                    </div>
+                    </div>
+                </div>
+                <div id="dad3" class="dad">
+                    <div class="news">
+                        <div class="title">
+                        <span class="news4"></span>
+                        华强北的转型之路：互联网浪潮的裹
+                    </div>
+                    <div id="content4" class="content">
+                        有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                        走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                        似乎要刹那被抽...
+                    </div>
+                    </div>
+                </div>
+                <div id="dad4" class="dad">
+                    <div class="news">
+                        <div class="title">
+                        <span class="news5"></span>
+                        发展战略级的概念，“互联网+”最
+                        </div>
+                    <div id="content5" class="content">
+                        有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                        走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                        似乎要刹那被抽...
+                    </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
-        </section1>
-        <section2></section2>
-        <section3></section3>
+
+        </section>
+        <section class="section2"></section>
+        <section class="section3"></section>
     </div>
 </div>
 <script src="js/swiper.min.js"></script>
 <script src="js/ajax.js"></script>
 <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+    var dad = document.getElementById("dad");
+    var dad1 = document.getElementById("dad1");
+    var dad2 = document.getElementById("dad2");
+    var dad3 = document.getElementById("dad3");
+    var dad4 = document.getElementById("dad4");
+    var content1 = document.getElementById("content1");
+    var content2 = document.getElementById("content2");
+    var content3 = document.getElementById("content3");
+    var content4 = document.getElementById("content4");
+    var content5 = document.getElementById("content5");
+    /*----------------------手风琴JS------------------------------------*/
+
+    dad.onmouseover = function () {
+        content1.style.height = "75px"
+        content2.style.height = "0"
+        content3.style.height = "0"
+        content4.style.height = "0"
+        content5.style.height = "0"
+    };
+    dad1.onmouseover = function () {
+        content1.style.height = "0"
+        content2.style.height = "75px"
+        content3.style.height = "0"
+        content4.style.height = "0"
+        content5.style.height = "0"
+    };
+    dad2.onmouseover = function () {
+        content1.style.height = "0"
+        content2.style.height = "0"
+        content3.style.height = "75px"
+        content4.style.height = "0"
+        content5.style.height = "0"
+    };
+    dad3.onmouseover = function () {
+        content1.style.height = "0"
+        content2.style.height = "0"
+        content3.style.height = "0"
+        content4.style.height = "75px"
+        content5.style.height = "0"
+    };
+    dad4.onmouseover = function () {
+        content1.style.height = "0"
+        content2.style.height = "0"
+        content3.style.height = "0"
+        content4.style.height = "0"
+        content5.style.height = "75px"
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+
+
     var swiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
         centeredSlides: true,
@@ -216,11 +454,73 @@
         direction: 'vertical',
         loop:true
     });
-    ajax("post","http://localhost/zlz/index/route.php","type=0",function (data) {
+   /* ajax("post","http://localhost/kxw/index/route.php","type=0",function (data) {
         var isJson = JSON.parse(data);
 //        console.log(isJson.swiper[0].imgSrc);
         console.log(isJson);
-    })
+    });*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------*/
+    var choose = document.getElementsByClassName("choose");
+    var showImg = document.getElementById("showImg");
+    var showA= document.getElementById("showA");
+    var showImgTextA= document.getElementById("showImgTextA");
+    var dataSw = [{imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/e8b145230d480caab9878fa665d1e96a.jpg",bigHref:"http://www.7006.top/view/opinion/605.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/5b39914316a2b88ab3f03011eafacd3f.jpg",bigHref:"http://www.7006.top/view/opinion/604.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/084bd9fcdbbe1742387819da96e879e7.jpg",bigHref:"http://www.7006.top/view/opinion/603.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/da58e2faca45f87be541e957295bd792.jpg",bigHref:"http://www.7006.top/view/opinion/602.html"}
+    ];
+
+
+    for (var i = 0;i<choose.length;i++){
+        choose[i].onmouseover = (function (i) {
+            return  function () {
+                showImg.src = dataSw[i].imgSrc;
+                showA.href = dataSw[i].bigHref;
+                showImgTextA.innerHTML = choose[i].innerHTML;
+                showImgTextA.href = dataSw[i].bigHref;
+                for(var j = 0;j< choose.length;j++){
+                    choose[j].style.opacity = 0.7;
+                }
+                choose[i].style.opacity = 1;
+            }
+        })(i)
+    }
+    var timerBigShow = null;
+    var bigShowindex = 1;
+    timerBigShow = setInterval(function () {
+        if (bigShowindex >= 4){
+            bigShowindex = 0
+        }
+        for(var i = 0;i <choose.length;i++){
+            choose[i].style.opacity = 0.7;
+        }
+        showImg.src = dataSw[bigShowindex].imgSrc;
+        showImgTextA.innerHTML = choose[bigShowindex].innerHTML;
+        showImg.src = dataSw[bigShowindex].imgSrc;
+        showImgTextA.href = dataSw[bigShowindex].bigHref;
+        choose[bigShowindex].style.opacity = 1;
+        bigShowindex++;
+    },2000)
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
