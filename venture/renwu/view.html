@@ -1,0 +1,34 @@
+<div class="markTitle">
+    {{name}}
+</div>
+<div class="anView" ng-repeat="item in subjects">
+    <div class="massageImg">
+        <a href="">
+            <img ng-src="{{item.img}}" alt="">
+        </a>
+        <div class="mark">{{item.mark}}</div>
+    </div>
+    <div class="messageInner">
+        <h1 class="messageTitle"><a href="" class="messageTitleA">{{item.title}}</a></h1>
+        <span class="messageText">{{item.content}}</span>
+        <span class="dir dir1">作者：<span class="athor">{{item.author}}</span></span>
+        <span class="time dir">{{item.date}}</span>
+    </div>
+    <!--<div>11111111</div>-->
+</div>
+<nav aria-label="Page navigation" class="pageBottem">
+    <ul class="pagination">
+        <li ng-class="{dusabled:currentPage<=1}">
+            <a ng-click="go(currentPage-1)" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li><a href="#/venture/renwu/1">1</a></li>
+        <li><a href="#/venture/renwu/2">2</a></li>
+        <li ng-class="{dusabled:currentPage>=1}">
+            <a ng-click="go(currentPage+1)" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>

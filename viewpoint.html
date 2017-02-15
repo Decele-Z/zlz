@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width:100%;
+            height:100%;
+            background-image: url("viewpoint/page_bg副本 2.jpg");
+            background-color:#f2f2f2;
+            background-repeat: no-repeat;
+        }
+        /*///////////////////*/
+        .wrap_nav{
+            width:100%;
+            background-color: #3b3b3b;
+
+        }
+        nav{
+            width:1200px;
+            height:60px;
+            overflow: hidden;
+            margin:0 auto;
+        }
+        .logo{
+            float: left;
+        }
+
+        .left_guide{
+            /*overflow: hidden;*/
+            margin-left: 50px;
+            float: left;
+
+        }
+        .nav_li{
+            float: left;
+            height: 60px;
+            text-align: center;
+            width:70px;
+            /*background-color:#069D8D ;*/
+        }
+        .nav_li:hover{
+            background-color:#069D8D ;
+        }
+
+        li{
+            list-style: none;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .li_a{
+            color: white;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .right_guide{
+            float:right;
+            line-height: 60px;
+        }
+        .contribute{
+            background-color: #069D8D;
+            float: left;
+            height: 32px;
+            width:76px;
+            line-height: 32px;
+            margin-top: 14px;
+            text-align: center;
+        }
+        .account{
+            float: left;
+            margin-left: 25px;
+            width:112px;
+            /*padding-left: 10px;*/
+        }
+        .account:hover{
+            background-color: white;
+
+        }
+        .account:hover .span_acc{
+            color:black;
+        }
+        .span_acc{
+            color: white;
+        }
+        .span_con{
+            color: white;
+        }
+        .span_acc::before{
+            content: url("index/账户.png");
+            position: relative;
+            top:10px;
+
+        }
+        .span_con::before{
+            content: url("index/投稿.png");
+            position: relative;
+            left:-3px;
+            top:3px;
+        }
+        .nav_li_bottom{
+            position: absolute;
+            width:90px;
+            background-color:white;
+            z-index: 100;
+            border: 1px solid antiquewhite;
+            display: none;
+        }
+        .nav_li_bottom1{
+            position: absolute;
+            width:91px;
+            padding: 10px;
+            background-color:white;
+            z-index: 100;
+            border: 1px solid #e8e8e8;
+            display: none;
+            border-top:0 ;
+        }
+
+        .nav_li_bottom li{
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .nav_li_bottom li:hover{
+            background-color: #069D8D;
+        }
+        .nav_li_bottom li:hover a{
+            color:white;
+        }
+        #Account_down li{
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+            line-height: 40px;
+        }
+        #Account_down li a{
+            color: black;
+        }
+        .register::before{
+            content: url("index/i5.png");
+            position: relative;
+            left:-25px;
+        }
+        .log::before{
+            content: url("index/i6.png");
+            position: relative;
+            left:-25px;
+        }
+        /*/////////////////////////////////*/
+        .backWhite{
+            width: 1150px;
+            padding: 0 25px;
+            background-color: #fff;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        .pageLeft{
+            float: left;
+            width: 770px;
+            padding-top: 60px;
+            padding-right: 30px;
+            border-right: 1px solid #E5E5E5;
+            position: relative;
+        }
+        .pageRight{
+            float: right;
+            display: inline;
+            width: 320px;
+        }
+        .ad1{
+            margin-top: 20px;
+        }
+        .ad1 img{
+            width: 320px;
+            height: 250px;
+        }
+        .markTitle{
+            float: left;
+            width: 100px;
+            height: 32px;
+            line-height: 32px;
+            position: absolute;
+            top:0;
+            left: -25px;
+            background-color: #00AA98;
+            color: #fff;
+            text-align: center;
+        }
+        .anView{
+            width: 770px;
+            height: 180px;
+            padding: 10px 0;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .massageImg{
+            width: 250px;
+            height: 165px;
+            float: left;
+            display: inline;
+            margin-right: 30px;
+            position: relative;
+        }
+        .massageImg img{
+            width: 250px;
+            height: 165px;
+        }
+        .mark{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 68px;
+            height: 30px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #00AA98;
+            text-align: center;
+            line-height: 30px;
+        }
+        .messageTitle{
+            font-size: 18px;
+            font-weight: bold;
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 5px;
+        }
+        .messageTitleA{
+            outline: 0;
+            text-decoration: none;
+            color: #333;
+        }
+        .messageText{
+            color: #3e3e3e;
+            font-size: 14px;
+            height: 102px;
+            line-height: 26px;
+        }
+
+        .dir{
+            color: #3e3e3e;
+            width: 130px;
+            display: inline-block;
+        }
+        .pageBottem{
+            margin-top: 50px;
+        }
+        /*/////////////////////////////////////*/
+        .ad2{
+            margin-top: 20px;
+            margin-left: 0px;
+            position: relative;
+            background: #fff;
+        }
+        .adTitle{
+            border-bottom: 3px solid #F5F5F5;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+        .asSP{
+            border-bottom: 3px solid #00AA98;
+            padding-bottom: 7px;
+            font-size: 18px;
+            color: #3C3B3C;
+        }
+        .adImg{
+            position: relative;
+            top: 3px;
+            left: 0;
+            margin-right: 5px;
+        }
+        #ad2inner{
+            position: absolute;
+            top: -3px;
+            right: 0;
+            font-size: 16px;
+        }
+        .ad3{
+            padding-top: 20px;
+        }
+        .ad4 li{
+            float: left;
+            width: 153px;
+            height: 150px;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #6b6a6a;
+        }
+        .ad4 li img{
+            width: 150px;
+            height: 98px;
+        }
+        .ad4 li p{
+            height: 46px;
+            line-height: 23px;
+            overflow: hidden;
+        }
+        .ad5{
+            margin-top: 20px;
+        }
+        .ad5 img{
+           width: 320px;
+           height: 250px; 
+        }
+        .weixin{
+            height: 240px;
+        }
+        .weixin span{
+            display: block;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 16px;
+            color: #4c4c4c;
+        }
+        .weixin img{
+            margin: 0 16px;
+        }
+        /*//////////////////////*/
+        .backTop{
+            width: 36px;
+            height:48px;
+            background: url("http://www.7006.top/style/images/side-icon02.png") #00AA98 no-repeat center center;
+            position: fixed;
+            bottom:67px;
+            right: 130px;
+        }
+        .code{
+            width: 36px;
+            height: 48px;
+            background: url("http://www.7006.top/style/images/side-icon01.png") no-repeat center #DADBDD;
+            position: fixed;
+            bottom:120px;
+            right: 130px;
+        }
+        .bigCode{
+            width: 270px;
+            height: 335px;
+            background: url("http://www.7006.top/style/images/icon.png") -4px -3px no-repeat;
+            position: fixed;
+            bottom:67px;
+            right: 170px;
+            display: none;
+        }
+        /*///////////////////////////*/
+        .footer{
+            width: 100%;
+            height: 56px;
+            background-color: #3E3E3E;
+        }
+        .footer .footerLeft{
+            /*width: 370px;*/
+            line-height: 56px;
+            font-size: 14px;
+            color: #8f8f8f;
+            margin-left: 190px;
+            float: left;
+        }
+        .footer .footerRight{
+            float: left;
+            margin-left: 200px;
+        }
+        .footer .footerRight a{
+            color: #8f8f8f;
+            font-size: 14px;
+            line-height: 56px;
+        }
+        .footer .footerRight span{
+            display: inline-block;
+            background: url("http://www.7006.top/style/images/line2.png") no-repeat 0 10px;
+            width: 2px;
+            height: 20px;
+            margin: 0 2px;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+<div class="wrap_nav">
+    <nav>
+        <div class="logo">
+            <img src="index/logo.png" alt="" style="width: 138px; height:60px" >
+        </div>
+        <div class="left_guide">
+            <li class="nav_li"><a class="li_a" href="">首页</a>
+
+
+            </li>
+            <li id="GD_up" class="nav_li view"><a class="li_a" href="">观点</a>
+                <ul id="GD_down" class="nav_li_bottom">
+                    <li><a href="#/viewpoint/point/1">观点</a></li>
+                    <li><a href="#/viewpoint/dianshang/1">电商</a></li>
+                    <li><a href="#/viewpoint/chuanmei/1">传媒</a></li>
+                    <li><a href="#/viewpoint/tongxin/1">通信</a></li>
+                </ul>
+
+            </li>
+            <li id="CT_up" class="nav_li venture"><a class="li_a" href="">创投</a>
+                <ul id="CT_down" class="nav_li_bottom">
+                    <li><a href="#/venture/chuangtou/1">创业</a></li>
+                    <li><a href="#/venture/renwu/1">人物</a></li>
+                    <li><a href="#/venture/jinrong/1">金融</a></li>
+                    <li><a href="#/venture/touzi/1">投资</a></li>
+                </ul>
+            </li>
+            <li id="SY_up" class="nav_li business"><a class="li_a" href="">商业</a>
+                <ul id="SY_down" class="nav_li_bottom">
+                    <li><a href="#/business/business/1">商业</a></li>
+                    <li><a href="#/business/anli/1">案例</a></li>
+
+                </ul>
+            </li>
+            <li id="ZK_up" class="nav_li case"><a class="li_a" href="">智客</a>
+                <ul id="ZK_down" class="nav_li_bottom">
+                    <li><a href="#/case/jingxuan/1">精选</a></li>
+                    <li><a href="#/case/ceping/1">评测</a></li>
+                </ul>
+            </li>
+            <li id="KB_up" class="nav_li news"><a class="li_a" href="">快报</a>
+                <ul id="KB_down" class="nav_li_bottom">
+                    <li><a href="">业界</a></li>
+                    <li><a href="">手机</a></li>
+                    <li><a href="">家电</a></li>
+                    <li><a href="">手游</a></li>
+                    <li><a href="">运行</a></li>
+                    <li><a href="">即时</a></li>
+                </ul>
+            </li>
+            <li id="D_up" class="nav_li more"><a class="li_a" href="">更多<img src="index/三角.png" style="width:25px;
+            height:25px;position: relative; top: 6px;"></a>
+                <ul id="D_down" class="nav_li_bottom">
+                    <li><a href="">滚动新闻</a></li>
+                    <li><a href="">聚合标签</a></li>
+                    <li><a href="">排行榜</a></li>
+                </ul>
+            </li>
+
+
+        </div>
+
+        <div class="right_guide">
+            <div class="contribute">
+
+                <a href=""><span class="span_con">投稿</span></a>
+            </div>
+            <div id="Account" class="account">
+                <a href=""><span class="span_acc">账户</span>
+                    <img id="black_angle" src="index/三角.png" alt="" style="width:25px;
+            height:25px;position: relative; top: 6px;"></a>
+                <ul id="Account_down" class="nav_li_bottom1">
+                    <li class="register"><a href="">注册</a></li>
+                    <li class="log"><a href="">登陆</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </nav>
+</div>
+<div class="backWhite" >
+    <!--左侧angular-->
+    <!--ng-view-->
+    <div class="pageLeft" ng-view>
+        <!--<div class="markTitle">-->
+            <!--观点-->
+        <!--</div>-->
+        <!--<div class="anView" >-->
+            <!--<div class="massageImg">-->
+                <!--<a href="">-->
+                    <!--<img src="http://www.7006.top/d/file/view/opinion/2015-03-30/d6c074b1fa7b96ef389e0d7c7439d962.jpg" alt="">-->
+                <!--</a>-->
+                <!--<div class="mark">观点</div>-->
+            <!--</div>-->
+            <!--<div class="messageInner">-->
+                <!--<h1 class="messageTitle"><a href="" class="messageTitleA">押宝Apple Watch，智能手表游戏玩得转吗？</a></h1>-->
+                <!--<p class="messageText">如果你给法拉利跑车贴上金箔，会被认为是俗气。但若在Apple Watch上使用黄金，则被认为是高上大的象征。这家公司动辄上万美元的黄金智能手表，土豪金版iPhone和MacBook，让土豪们为之疯狂...</p>-->
+                <!--<span class="dir dir1">作者：<span class="athor">阿帆</span></span>-->
+                <!--<span class="time dir">2015-03-30 11:33</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+<!--右侧广告-->
+    <div class="pageRight">
+       <div class="ad1">
+           <img src="http://www.7006.top/style/images/imgad1.gif" alt="">
+       </div>
+        <div class="ad2">
+            <div class="adTitle">
+                <span class="asSP"><img src="http://www.7006.top/style/images/symbol-18.png" alt="" class="adImg">排行榜</span>
+            </div>
+            <div id="ad2inner">
+                <span>月排行</span>
+                <span>周排行</span>
+                <span>日排行</span>
+            </div>
+        </div>
+        <div class="ad3">
+            <img src="http://www.7006.top/style/images/img15.jpg" alt="">
+        </div>
+        <div class="ad2">
+            <div class="adTitle">
+                <span class="asSP"><img src="http://www.7006.top/style/images/symbol-7.png" alt="" class="adImg">编辑推荐</span>
+            </div>
+        </div>
+        <ul class="ad4">
+            <li>
+                <img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/606f065a8fdbd27d8acc60596312f702.jpg" alt="2015年游戏行业风向标：创业者必须关注的几个方向">
+                <p>2015年游戏行业风向标：创业者必须关</p>
+            </li>
+            <li>
+                <img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/f0063b44b52fece4d7a1a7e41be70d48.jpg" alt="山水文化资产遭封 游戏收购恐泡汤">
+                <p>山水文化资产遭封 游戏收购恐泡汤</p>
+            </li>
+            <li>
+                <img src="http://www.7006.top/d/file/news/mobile/2015-03-28/c193341fcbe5ddafed99b9396c343770.png" alt="三星将推Orbis智能手表">
+                <p>三星将推Orbis智能手表</p>
+            </li>
+            <li>
+                <img src="http://www.7006.top/d/file/news/mobile/2015-03-28/05679f7d33f1e28eb8d0b93f8c0dc67a.jpg" alt="世界上你没听说过的5款“小不点”手机">
+                <p>世界上你没听说过的5款“小不点”手机</p>
+            </li>
+        </ul>
+        <div class="ad5">
+            <img src="http://www.7006.top/style/images/imgad2.gif" alt="">
+        </div>
+        <div class="ad2">
+            <div class="adTitle">
+                <span class="asSP"><img src="http://www.7006.top/style/images/symbol-5.png" alt="" class="adImg">关注我们</span>
+            </div>
+            <div class="weixin">
+                <span>关注微信公众号，了解最新精彩内容</span>
+                <p>
+                    <img src="http://www.7006.top/style/images/qr1.jpg" alt="">
+                    <img src="http://www.7006.top/style/images/qr2.jpg" alt="">
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!--///////////////-->
+<div class="backTop" id="backTop"></div>
+<div class="code" id="code"></div>
+<div class="bigCode" id="bigCode"></div>
+<div class="footer">
+    <div class="footerLeft">© 2013-2015 科讯网（www.7006.top）版权所有  备案：皖ICP备15010744号</div>
+    <div class="footerRight">
+        <a href="">关于我们</a>
+        <span></span>
+        <a href="">联系我们</a>
+        <span></span>
+        <a href="">商务合作</a>
+        <span></span>
+        <a href="">寻求报道</a>
+        <span></span>
+        <a href="">投稿须知</a>
+        <span></span>
+        <a href="">版权声明</a>
+        <span></span>
+        <a href="">网站地图</a>
+        <span></span>
+        <a href="">站长统计</a>
+    </div>
+</div>
+
+
+
+<script src="viewpoint/point/controller.js"></script>
+<script src="viewpoint/dianshang/controller.js"></script>
+<script src="viewpoint/chuanmei/controller.js"></script>
+<script src="viewpoint/tongxin/controller.js"></script>
+<script src="venture/chuangtou/controller.js"></script>
+<script src="venture/renwu/controller.js"></script>
+<script src="venture/jinrong/controller.js"></script>
+<script src="venture/touzi/controller.js"></script>
+<script src="business/business/controller.js"></script>
+<script src="business/anli/controller.js"></script>
+<script src="case/jingxuan/controller.js"></script>
+<script src="case/ceping/controller.js"></script>
+<script src="ajax.js"></script>
+<script type="text/javascript">
+    var GD_up =document.getElementById("GD_up");
+    var GD_down = document.getElementById("GD_down");
+    var D_up =document.getElementById("D_up");
+    var D_down = document.getElementById("D_down");
+    var CT_up =document.getElementById("CT_up");
+    var CT_down = document.getElementById("CT_down");
+    var SY_up =document.getElementById("SY_up");
+    var SY_down = document.getElementById("SY_down");
+    var ZK_up =document.getElementById("ZK_up");
+    var ZK_down = document.getElementById("ZK_down");
+    var KB_up =document.getElementById("KB_up");
+    var KB_down = document.getElementById("KB_down");
+    var black_angle = document.getElementById("black_angle");
+    var Account = document.getElementById("Account");
+    var Account_down = document.getElementById("Account_down")
+
+
+
+    GD_up.onmouseover =function () {
+        GD_down.style.display = "block"
+    }
+    GD_up.onmouseout = function () {
+        GD_down.style.display = "none"
+    }
+    D_up.onmouseover =function () {
+        D_down.style.display = "block"
+    }
+    D_up.onmouseout = function () {
+        D_down.style.display = "none"
+    }
+    CT_up.onmouseover =function () {
+        CT_down.style.display = "block"
+    }
+    CT_up.onmouseout = function () {
+        CT_down.style.display = "none"
+    }
+    SY_up.onmouseover =function () {
+        SY_down.style.display = "block"
+    }
+    SY_up.onmouseout = function () {
+        SY_down.style.display = "none"
+    }
+    ZK_up.onmouseover =function () {
+        ZK_down.style.display = "block"
+    }
+    ZK_up.onmouseout = function () {
+        ZK_down.style.display = "none"
+    }
+    KB_up.onmouseover =function () {
+        KB_down.style.display = "block"
+    }
+    KB_up.onmouseout = function () {
+        KB_down.style.display = "none"
+    }
+    Account.onmouseover=function () {
+        black_angle.src="黑三角.png"
+        Account_down.style.display = "block"
+    }
+    Account.onmouseout=function () {
+        black_angle.src="三角.png"
+        Account_down.style.display = "none"
+    }
+
+</script>
+<script type="text/javascript">
+    var myApp = angular.module('myApp',[
+        'ngRoute',
+        'point',
+        'dianshang',
+        'chuanmei',
+        'tongxin',
+        'chuangtou',
+        'renwu',
+        'jinrong',
+        'touzi',
+        'business',
+        'anli',
+        'jingxuan',
+        'ceping'
+    ])
+    myApp.config(['$routeProvider',function ($routeProvider) {
+        $routeProvider.otherwise({
+            redirectTo:'/viewpoint/chuangtou/1'//当链接后面不是指定连接时,则为
+        })
+    }])
+    ////////////////////////////
+    var backTop = document.getElementById("backTop");
+    var code = document.getElementById("code");
+    var bigCode = document.getElementById("bigCode");
+    var speed = 25;
+    backTop.onclick=function () {
+        var backTimer=setInterval(function () {
+            var theTop = document.body.scrollTop;
+            if (theTop<=0){
+                clearInterval(backTimer);
+            }else {
+                document.body.scrollTop=theTop-speed;
+            }
+        },10);
+    }
+    var isTrue = false;
+    code.onclick=function () {
+        isTrue=!isTrue;
+        if (isTrue){
+            bigCode.style.display="block";
+        }else {
+            bigCode.style.display="none";
+        }
+    }
+
+
+</script>
+</body>
+</html>
