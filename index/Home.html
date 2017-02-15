@@ -16,14 +16,155 @@
             background-color:#f2f2f2;
             background-repeat: no-repeat;
         }
-        iframe{
+        /*iframe{*/
+            /*width:100%;*/
+            /*border:none;*/
+            /*scrolling:"no";*/
+            /*position: fixed;*/
+            /*top:0;*/
+            /*left: 0;*/
+            /*z-index: 1000;*/
+        /*}*/
+        .wrap_nav{
             width:100%;
-            border:none;
-            scrolling:"no";
+            background-color: #3b3b3b;
             position: fixed;
             top:0;
             left: 0;
             z-index: 1000;
+        }
+        nav{
+            width:1200px;
+            height:60px;
+            overflow: hidden;
+            margin:0 auto;
+        }
+        .logo{
+            float: left;
+        }
+
+        .left_guide{
+            /*overflow: hidden;*/
+            margin-left: 50px;
+            float: left;
+
+        }
+        .nav_li{
+            float: left;
+            height: 60px;
+            text-align: center;
+            width:70px;
+            /*background-color:#069D8D ;*/
+        }
+        .nav_li:hover{
+            background-color:#069D8D ;
+        }
+
+        li{
+            list-style: none;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .li_a{
+            color: white;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .right_guide{
+            float:right;
+            line-height: 60px;
+        }
+        .contribute{
+            background-color: #069D8D;
+            float: left;
+            height: 32px;
+            width:76px;
+            line-height: 32px;
+            margin-top: 14px;
+            text-align: center;
+        }
+        .account{
+            float: left;
+            margin-left: 25px;
+            width:112px;
+            /*padding-left: 10px;*/
+        }
+        .account:hover{
+            background-color: white;
+
+        }
+        .account:hover .span_acc{
+            color:black;
+        }
+        .span_acc{
+            color: white;
+        }
+        .span_con{
+            color: white;
+        }
+        .span_acc::before{
+            content: url("账户.png");
+            position: relative;
+            top:10px;
+
+        }
+        .span_con::before{
+            content: url("投稿.png");
+            position: relative;
+            left:-3px;
+            top:3px;
+        }
+        .nav_li_bottom{
+            position: absolute;
+            width:90px;
+            background-color:white;
+            z-index: 100;
+            border: 1px solid antiquewhite;
+            display: none;
+        }
+        .nav_li_bottom1{
+            position: absolute;
+            width:91px;
+            padding: 10px;
+            background-color:white;
+            z-index: 100;
+            border: 1px solid #e8e8e8;
+            display: none;
+            border-top:0 ;
+        }
+
+        .nav_li_bottom li{
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .nav_li_bottom li:hover{
+            background-color: #069D8D;
+        }
+        .nav_li_bottom li:hover a{
+            color:white;
+        }
+        #Account_down li{
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+            line-height: 40px;
+        }
+        #Account_down li a{
+            color: black;
+        }
+        .register::before{
+            content: url("i5.png");
+            position: relative;
+            left:-25px;
+        }
+        .log::before{
+            content: url("i6.png");
+            position: relative;
+            left:-25px;
         }
         .wrap{
             width: 1200px;
@@ -106,11 +247,21 @@
         /*//////////////////大轮播图//////////////////*/
 
 
+        .section1{
+            overflow: hidden;
+            /*clear: both;*/
+            /*height: 365px;*/
+            /*width:1200px;*/
+        }
+
+
         #aboutShow{
             overflow: hidden;
             width: 820px;
             height: 365px;
-
+            /*左浮动*/
+            float: left;
+            margin-bottom: 20px;
         }
         #showDiv {
             float: left;
@@ -159,8 +310,95 @@
             text-decoration: none;
             /*opacity: 1;*/
         }
-        .section1 .diguo{
+        /*////////////////////////////////////////////////*/
+
+        #dadlyNews{
+            float: left;
+            margin-left: 10px;
+            width:360px;
+        }
+        #newsTitle{
+            font-size: 20px;
+            height: 30px;
+            line-height: 30px;
+            /*text-indent: 2em;*/
+            border-bottom: 3px solid #00AA98 ;
+            margin-bottom: 20px;
+        }
+        #newsTitle::before{
+            content: url(toutiao.png);
+        }
+        .grayline{
+            width:240px;
+            height: 3px;
+            background-color: lightgray;
+            float: right;
+            position: relative;
+            top:30px;
+        }
+        .news1{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 0;
+            width: 20px;
+            height: 20px;
+        }
+        .news2{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 -36px;
+            width: 20px;
+            height: 20px;
+        }
+        .news3{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 -71px;
+            width: 20px;
+            height: 20px;
+        }
+        .news4{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 -107px;
+            width: 20px;
+            height: 20px;
+        }
+        .news5{
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            background: url('symbol.png') no-repeat 0 -144px;
+            width: 20px;
+            height: 20px;
+        }
+        .news{
+            width:360px;
+            /*height:25px;*/
+            line-height: 25px;
             margin-top: 20px;
+            text-indent: 1.3em;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .content{
+            width:360px;
+            font-size: 12px;
+            height:0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        #content5{
+            height: 75px;
+        }
+        .title:hover{
+            color:aquamarine;
+        }
+        .section1 .diguo{
+            /*margin-top: 20px;*/
         }
         .section1 .diguo .thereport{
             margin-left: 20px;
@@ -171,13 +409,23 @@
         /*///////////////////----------section2-------------////////////////////*/
         .section2{
             margin-top: 25px;
+            overflow: hidden;
+        }
+        .section2 .section2Left{
+            float: left;
+        }
+        .section2 .section2Right{
+            float: left;
+            margin-left: 20px;
+            width: 320px;
+            /*height: 433px;*/
         }
         .section2 .read{
             width: 820px;
             height:24px;
             padding-bottom: 5px;
             margin-bottom: 5px;
-            border-bottom:3px solid #F5F5F5
+            border-bottom:3px solid #F5F5F5;
         }
         .section2 .read span::before{
             content: url("http://www.7006.top/style/images/symbol-4.png");
@@ -234,13 +482,172 @@
             color: #676666;
             font-size: 12px;
         }
+        .section2 .section2Right .aboutUs{
+            width: 320px;
+            height:24px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom:3px solid #F5F5F5;
+        }
+        .section2 .section2Right .aboutUs span::before{
+            content: url("http://www.7006.top/style/images/symbol-5.png");
+            position: relative;
+            top:1px;
+            left: -2px;
+        }
+        .section2 .section2Right .aboutUs span{
+            line-height: 22px;
+            height:22px;
+            margin-left: 3px;
+            padding-bottom: 4px;
+            font-size: 18px;
+            color: #3C3B3C;
+            border-bottom: 3px solid #00AA98;
+        }
+        .section2 .section2Right .aboutContent{
+            width: 320px;
+            height: 361px;
+            margin-top: 20px;
+            background-color: #F4F4F4;
+        }
+        .section2 .section2Right .aboutContent p{
+            padding: 25px 0;
+            text-align: center;
+        }
+        .section2 .section2Right .aboutContent .aboutImg{
+            text-align: center;
+        }
+        .section2 .section2Right .aboutContent .aboutImg .aboutImg1{
+            margin-right: 30px;
+        }
+        .section2 .section2Right .aboutContent .weibo{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .section2 .section2Right .aboutContent .weibo img{
+            margin-right: 30px;
+        }
+        /******************section3***************************/
+        .section3{
+            margin-top: 25px;
+            overflow: hidden;
+        }
+        .section3 .section3Left{
+            float: left;
+        }
+        .section3 .section3Right{
+            float: left;
+            margin-left: 20px;
+            width: 320px;
+        }
+        .section3 .hot{
+            width: 820px;
+            height:24px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom:3px solid #F5F5F5;
+        }
+        .section3 .hot span::before{
+            content: url("http://www.7006.top/style/images/symbol-6.png");
+            position: relative;
+            top:1px;
+            left: -2px;
+        }
+        .section3 .hot span{
+            line-height: 22px;
+            height:22px;
+            margin-left: 3px;
+            padding-bottom: 9px;
+            font-size: 18px;
+            color: #3C3B3C;
+            border-bottom: 3px solid #00AA98;
+        }
     </style>
 </head>
 <body>
 <div class="all">
-    <iframe src="nav.html">
-        <!--nav的高是60-->
-    </iframe>
+    <div class="wrap_nav">
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="" style="width: 138px; height:60px" >
+            </div>
+            <div class="left_guide">
+                <li class="nav_li"><a class="li_a" href="">首页</a>
+
+
+                </li>
+                <li id="GD_up" class="nav_li view"><a class="li_a" href="">观点</a>
+                    <ul id="GD_down" class="nav_li_bottom">
+                        <li><a href="">观点</a></li>
+                        <li><a href="">电商</a></li>
+                        <li><a href="">传媒</a></li>
+                        <li><a href="">通信</a></li>
+                    </ul>
+
+                </li>
+                <li id="CT_up" class="nav_li venture"><a class="li_a" href="">创投</a>
+                    <ul id="CT_down" class="nav_li_bottom">
+                        <li><a href="">创业</a></li>
+                        <li><a href="">人物</a></li>
+                        <li><a href="">金融</a></li>
+                        <li><a href="">投资</a></li>
+                    </ul>
+                </li>
+                <li id="SY_up" class="nav_li business"><a class="li_a" href="">商业</a>
+                    <ul id="SY_down" class="nav_li_bottom">
+                        <li><a href="">商业</a></li>
+                        <li><a href="">案例</a></li>
+
+                    </ul>
+                </li>
+                <li id="ZK_up" class="nav_li case"><a class="li_a" href="">智客</a>
+                    <ul id="ZK_down" class="nav_li_bottom">
+                        <li><a href="">精选</a></li>
+                        <li><a href="">评测</a></li>
+                    </ul>
+                </li>
+                <li id="KB_up" class="nav_li newspaper"><a class="li_a" href="">快报</a>
+                    <ul id="KB_down" class="nav_li_bottom">
+                        <li><a href="">业界</a></li>
+                        <li><a href="">手机</a></li>
+                        <li><a href="">家电</a></li>
+                        <li><a href="">手游</a></li>
+                        <li><a href="">运行</a></li>
+                        <li><a href="">即时</a></li>
+                    </ul>
+                </li>
+                <li id="D_up" class="nav_li more"><a class="li_a" href="">更多<img src="三角.png" style="width:25px;
+            height:25px;position: relative; top: 6px;"></a>
+                    <ul id="D_down" class="nav_li_bottom">
+                        <li><a href="">滚动新闻</a></li>
+                        <li><a href="">聚合标签</a></li>
+                        <li><a href="">排行榜</a></li>
+                    </ul>
+                </li>
+
+
+            </div>
+
+            <div class="right_guide">
+                <div class="contribute">
+
+                    <a href=""><span class="span_con">投稿</span></a>
+                </div>
+                <div id="Account" class="account">
+                    <a href=""><span class="span_acc">账户</span>
+                        <img id="black_angle" src="三角.png" alt="" style="width:25px;
+            height:25px;position: relative; top: 6px;"></a>
+                    <ul id="Account_down" class="nav_li_bottom1">
+                        <li class="register"><a href="">注册</a></li>
+                        <li class="log"><a href="">登陆</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </nav>
+    </div>
     <div class="wrap">
         <header>
             <div class="swiper-container">
@@ -296,14 +703,70 @@
                 </ul>
             </div>
             <div id="dadlyNews">
-                <div id="newsTitle">
 
+                <div id="newsTitle">
+                    今日头条
+                    <div class="grayline"></div>
                 </div>
-                <div class="news"></div>
-                <div class="news"></div>
-                <div class="news"></div>
-                <div class="news"></div>
-                <div class="news"></div>
+                <div id="dad" class="dad">
+                    <div class="news">
+
+                        <div class="title"><span class="news1"></span>血仍未冷历久而新，一个纸媒逃兵的</div>
+                        <div id="content1" class="content">
+                            有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                            走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                            似乎要刹那被抽...
+                        </div>
+                    </div>
+                </div>
+                <div id="dad1" class="dad">
+                    <div class="news">
+
+                        <div class="title"><span class="news2"></span>Windows 10免费的背后：微软有颗骚</div>
+                        <div id="content2" class="content">
+                            有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                            走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                            似乎要刹那被抽...
+                        </div>
+                    </div>
+                </div>
+                <div id="dad2" class="dad">
+                    <div class="news">
+
+                        <div class="title"><span class="news3"></span>看巨头齐聚IT领袖峰会，云计算才是</div>
+                        <div id="content3" class="content">
+                            有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                            走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                            似乎要刹那被抽...
+                        </div>
+                    </div>
+                </div>
+                <div id="dad3" class="dad">
+                    <div class="news">
+                        <div class="title">
+                            <span class="news4"></span>
+                            华强北的转型之路：互联网浪潮的裹
+                        </div>
+                        <div id="content4" class="content">
+                            有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                            走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                            似乎要刹那被抽...
+                        </div>
+                    </div>
+                </div>
+                <div id="dad4" class="dad">
+                    <div class="news">
+                        <div class="title">
+                            <span class="news5"></span>
+                            发展战略级的概念，“互联网+”最
+                        </div>
+                        <div id="content5" class="content">
+                            有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                            走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                            似乎要刹那被抽...
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="diguo">
                 <img src="img/帝国cms.jpg" alt="">
@@ -312,25 +775,115 @@
             </div>
         </section>
         <section class="section2">
-            <div class="read">
-                <span>精选导读</span>
-            </div>
-            <div class="readDiv" id="readDiv">
-                <!--<div class="readSmallDiv">-->
+            <div class="section2Left">
+                <div class="read">
+                    <span>精选导读</span>
+                </div>
+                <div class="readDiv" id="readDiv">
+                    <!--<div class="readSmallDiv">-->
                     <!--<img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/c0787f3a1fe29c07f9ccd86b7c474fb7.jpg" alt="">-->
                     <!--<div class="readTitle">-->
-                        <!--<h3><a href="http://www.7006.top/news/shouyou/475.html">开炮，全球首款小游戏社交APP正式上线</a></h3>-->
-                        <!--<p>由鲲磐网络自主研发的全球首款小游戏社交APP“开炮”正式上线，将陌生人社交...</p>-->
+                    <!--<h3><a href="http://www.7006.top/news/shouyou/475.html">开炮，全球首款小游戏社交APP正式上线</a></h3>-->
+                    <!--<p>由鲲磐网络自主研发的全球首款小游戏社交APP“开炮”正式上线，将陌生人社交...</p>-->
                     <!--</div>-->
-                <!--</div>-->
+                    <!--</div>-->
+                </div>
             </div>
+            <div class="section2Right">
+                <div class="aboutUs">
+                    <span>关注我们</span>
+                </div>
+                <div class="aboutContent">
+                    <p>关注微信公众号,了解最新精彩内容</p>
+                    <div class="aboutImg">
+                        <img src="http://www.7006.top/style/images/qr1.jpg" alt="" class="aboutImg1">
+                        <img src="http://www.7006.top/style/images/qr2.jpg" alt="">
+                    </div>
+                    <div class="weibo">
+                        <img src="http://www.7006.top/style/images/wb1.png" alt="">
+                        <img src="http://www.7006.top/style/images/wb2.png" alt="">
+                        <img src="http://www.7006.top/style/images/subscription.png" alt="">
+                    </div>
+                </div>
+            </div>
+
         </section>
-        <section class="section3"></section>
+        <section class="section3">
+            <div class="section3Left">
+                <div class="hot">
+                    <span>热门推荐</span>
+                </div>
+                <div class="hotRecommend">
+
+                </div>
+            </div>
+            <div class="section3Right"></div>
+        </section>
     </div>
 </div>
 <script src="js/swiper.min.js"></script>
 <script src="js/ajax.js"></script>
 <script type="text/javascript">
+    var GD_up =document.getElementById("GD_up");
+    var GD_down = document.getElementById("GD_down");
+    var D_up =document.getElementById("D_up");
+    var D_down = document.getElementById("D_down");
+    var CT_up =document.getElementById("CT_up");
+    var CT_down = document.getElementById("CT_down");
+    var SY_up =document.getElementById("SY_up");
+    var SY_down = document.getElementById("SY_down");
+    var ZK_up =document.getElementById("ZK_up");
+    var ZK_down = document.getElementById("ZK_down");
+    var KB_up =document.getElementById("KB_up");
+    var KB_down = document.getElementById("KB_down");
+    var black_angle = document.getElementById("black_angle");
+    var Account = document.getElementById("Account");
+    var Account_down = document.getElementById("Account_down")
+    GD_up.onmouseover =function () {
+        GD_down.style.display = "block"
+    }
+    GD_up.onmouseout = function () {
+        GD_down.style.display = "none"
+    }
+    D_up.onmouseover =function () {
+        D_down.style.display = "block"
+    }
+    D_up.onmouseout = function () {
+        D_down.style.display = "none"
+    }
+    CT_up.onmouseover =function () {
+        CT_down.style.display = "block"
+    }
+    CT_up.onmouseout = function () {
+        CT_down.style.display = "none"
+    }
+    SY_up.onmouseover =function () {
+        SY_down.style.display = "block"
+    }
+    SY_up.onmouseout = function () {
+        SY_down.style.display = "none"
+    }
+    ZK_up.onmouseover =function () {
+        ZK_down.style.display = "block"
+    }
+    ZK_up.onmouseout = function () {
+        ZK_down.style.display = "none"
+    }
+    KB_up.onmouseover =function () {
+        KB_down.style.display = "block"
+    }
+    KB_up.onmouseout = function () {
+        KB_down.style.display = "none"
+    }
+    Account.onmouseover=function () {
+        black_angle.src="黑三角.png"
+        Account_down.style.display = "block"
+    }
+    Account.onmouseout=function () {
+        black_angle.src="三角.png"
+        Account_down.style.display = "none"
+    }
+
     var readDiv = document.getElementById("readDiv");
     var swiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
@@ -391,7 +944,53 @@
         choose[bigShowindex].style.opacity = 1;
         bigShowindex++;
     },2000)
+    var dad = document.getElementById("dad");
+    var dad1 = document.getElementById("dad1");
+    var dad2 = document.getElementById("dad2");
+    var dad3 = document.getElementById("dad3");
+    var dad4 = document.getElementById("dad4");
+    var content1 = document.getElementById("content1");
+    var content2 = document.getElementById("content2");
+    var content3 = document.getElementById("content3");
+    var content4 = document.getElementById("content4");
+    var content5 = document.getElementById("content5");
+    /*----------------------手风琴JS------------------------------------*/
 
+    dad.onmouseover = function () {
+        content1.style.height = "75px"
+        content2.style.height = "0"
+        content3.style.height = "0"
+        content4.style.height = "0"
+        content5.style.height = "0"
+    };
+    dad1.onmouseover = function () {
+        content1.style.height = "0"
+        content2.style.height = "75px"
+        content3.style.height = "0"
+        content4.style.height = "0"
+        content5.style.height = "0"
+    };
+    dad2.onmouseover = function () {
+        content1.style.height = "0"
+        content2.style.height = "0"
+        content3.style.height = "75px"
+        content4.style.height = "0"
+        content5.style.height = "0"
+    };
+    dad3.onmouseover = function () {
+        content1.style.height = "0"
+        content2.style.height = "0"
+        content3.style.height = "0"
+        content4.style.height = "75px"
+        content5.style.height = "0"
+    };
+    dad4.onmouseover = function () {
+        content1.style.height = "0"
+        content2.style.height = "0"
+        content3.style.height = "0"
+        content4.style.height = "0"
+        content5.style.height = "75px"
+    };
     /////////////////动态创建精选导读////////////////////////
     function createReadDiv(img,title,content) {
         var smallDiv = document.createElement("div");
