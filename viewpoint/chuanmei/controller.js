@@ -31,7 +31,6 @@ module.controller('chuanmeiController', ['$scope','$route','$routeParams','$http
             //console.log(($scope.totalCount-((page-1)*10))/10)
         }else {
             $scope.pages = isJson.length;
-
         }
 
         for(var i = (page-1) * 10;i< $scope.pages;i++){
