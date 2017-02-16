@@ -27,9 +27,20 @@ module.controller('anliController', ['$scope','$route','$routeParams','$http', f
         //page = 1;
 
         //$scope.pages = page * 10;
+        if ((isJson.length-((page-1)*10))/10 > 1){
+            $scope.pages = page * 10;
+            //console.log(($scope.totalCount-((page-1)*10))/10)
+        }else {
+            $scope.pages = isJson.length;
 
-        for(var i = 0;i< 8;i++){
+        }
+
+        for(var i = (page-1) * 10;i< $scope.pages;i++){
+            if (i< 10){
                 $scope.subjects[i] = isJson[i];
+            }else{
+                $scope.subjects[i-(10*(page-1))] = isJson[i];
+            }
         }
         console.log(page)
         console.log($scope.subjects);
