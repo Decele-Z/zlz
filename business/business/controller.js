@@ -26,7 +26,13 @@ module.controller('businessController', ['$scope','$route','$routeParams','$http
         //console.log(isJson);
         //page = 1;
 
-        $scope.pages = page * 10;
+        if ((isJson.length-((page-1)*10))/10 > 1){
+            $scope.pages = page * 10;
+            //console.log(($scope.totalCount-((page-1)*10))/10)
+        }else {
+            $scope.pages = isJson.length;
+
+        }
 
         for(var i = (page-1) * 10;i< $scope.pages;i++){
             if (i< 10){
