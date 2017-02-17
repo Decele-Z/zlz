@@ -16,14 +16,155 @@
             background-color:#f2f2f2;
             background-repeat: no-repeat;
         }
-        iframe{
+        /*iframe{*/
+            /*width:100%;*/
+            /*border:none;*/
+            /*scrolling:"no";*/
+            /*position: fixed;*/
+            /*top:0;*/
+            /*left: 0;*/
+            /*z-index: 1000;*/
+        /*}*/
+        .wrap_nav{
             width:100%;
-            border:none;
-            scrolling:"no";
+            background-color: #3b3b3b;
             position: fixed;
             top:0;
             left: 0;
             z-index: 1000;
+        }
+        nav{
+            width:1200px;
+            height:60px;
+            overflow: hidden;
+            margin:0 auto;
+        }
+        .logo{
+            float: left;
+        }
+
+        .left_guide{
+            /*overflow: hidden;*/
+            margin-left: 50px;
+            float: left;
+
+        }
+        .nav_li{
+            float: left;
+            height: 60px;
+            text-align: center;
+            width:70px;
+            /*background-color:#069D8D ;*/
+        }
+        .nav_li:hover{
+            background-color:#069D8D ;
+        }
+
+        li{
+            list-style: none;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .li_a{
+            color: white;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .right_guide{
+            float:right;
+            line-height: 60px;
+        }
+        .contribute{
+            background-color: #069D8D;
+            float: left;
+            height: 32px;
+            width:76px;
+            line-height: 32px;
+            margin-top: 14px;
+            text-align: center;
+        }
+        .account{
+            float: left;
+            margin-left: 25px;
+            width:112px;
+            /*padding-left: 10px;*/
+        }
+        .account:hover{
+            background-color: white;
+
+        }
+        .account:hover .span_acc{
+            color:black;
+        }
+        .span_acc{
+            color: white;
+        }
+        .span_con{
+            color: white;
+        }
+        .span_acc::before{
+            content: url("账户.png");
+            position: relative;
+            top:10px;
+
+        }
+        .span_con::before{
+            content: url("投稿.png");
+            position: relative;
+            left:-3px;
+            top:3px;
+        }
+        .nav_li_bottom{
+            position: absolute;
+            width:90px;
+            background-color:white;
+            z-index: 100;
+            border: 1px solid antiquewhite;
+            display: none;
+        }
+        .nav_li_bottom1{
+            position: absolute;
+            width:91px;
+            padding: 10px;
+            background-color:white;
+            z-index: 100;
+            border: 1px solid #e8e8e8;
+            display: none;
+            border-top:0 ;
+        }
+
+        .nav_li_bottom li{
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .nav_li_bottom li:hover{
+            background-color: #069D8D;
+        }
+        .nav_li_bottom li:hover a{
+            color:white;
+        }
+        #Account_down li{
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+            line-height: 40px;
+        }
+        #Account_down li a{
+            color: black;
+        }
+        .register::before{
+            content: url("i5.png");
+            position: relative;
+            left:-25px;
+        }
+        .log::before{
+            content: url("i6.png");
+            position: relative;
+            left:-25px;
         }
         .wrap{
             width: 1200px;
@@ -44,6 +185,7 @@
             margin-bottom: 10px;
         }
         .swiper-container {
+            display: inline-block;
             width: 60%;
             height: 45px;
             margin-left: -25px;
@@ -79,14 +221,39 @@
             font-size: 14px;
             color: #757474;
         }
+        header .search {
+            float: right;
+            width: 220px;
+            height:40px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        header .search #tSearch{
+            width: 150px;
+            height:30px;
+            border:1px solid #00AA98;
+            float: left;
+        }
+        header .search button{
+            display: inline-block;
+            float: left;
+            width: 40px;
+            height:32px;
+            background-color: #00AA98;
+            /*background: url("http://www.7006.top/style/images/btn-msearch.png");*/
+            border: none;
+            margin-left: -5px;
+        }
         /*//////////////////大轮播图//////////////////*/
+
+
         .section1{
             overflow: hidden;
             /*clear: both;*/
             /*height: 365px;*/
             /*width:1200px;*/
         }
-        
+
 
         #aboutShow{
             overflow: hidden;
@@ -94,6 +261,7 @@
             height: 365px;
             /*左浮动*/
             float: left;
+            margin-bottom: 20px;
         }
         #showDiv {
             float: left;
@@ -229,14 +397,561 @@
         .title:hover{
             color:aquamarine;
         }
+        .section1 .diguo{
+            /*margin-top: 20px;*/
+        }
+        .section1 .diguo .thereport{
+            margin-left: 20px;
+        }
+        .section1 .diguo .longmark{
+            margin-top: 10px;
+        }
+        /*///////////////////----------section2-------------////////////////////*/
+        .section2{
+            margin-top: 25px;
+            overflow: hidden;
+        }
+        .section2 .section2Left{
+            float: left;
+        }
+        .section2 .section2Right{
+            float: left;
+            margin-left: 20px;
+            width: 320px;
+            /*height: 433px;*/
+        }
+        .section2 .read{
+            width: 820px;
+            height:24px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom:3px solid #F5F5F5;
+        }
+        .section2 .read span::before{
+            content: url("http://www.7006.top/style/images/symbol-4.png");
+            position: relative;
+            top:1px;
+            left: -2px;
+        }
+        .section2 .read span{
+            line-height: 22px;
+            height:22px;
+            margin-left: 3px;
+            padding-bottom: 9px;
+            font-size: 18px;
+            color: #3C3B3C;
+            border-bottom: 3px solid #00AA98;
+        }
+        .section2 .readDiv{
+            overflow: hidden;
+            margin-top: 20px;
+            width: 820px;
+        }
+        .section2 .readDiv .readSmallDiv{
+            float: left;
+            width: 385px;
+            height: 87px;
+            margin-bottom: 20px;
+            margin-right: 5px;
+            background-color: #F3F8FC;
+            padding: 10px;
+        }
+        .section2 .readDiv .readSmallDiv Img{
+            float: left;
+            width: 130px;
+            height:85px;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle{
+            float: left;
+            width: 240px;
+            margin-left: 5px;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle h3 a{
+            text-decoration: none;
+            font-size: 16px;
+            color: #000;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle h3:hover{
+            background-color: #00AA98;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle h3:hover a{
+            color: #fff;;
+        }
+        .section2 .readDiv .readSmallDiv .readTitle p{
+            margin-top:10px;
+            color: #676666;
+            font-size: 12px;
+        }
+        .section2 .section2Right .aboutUs{
+            width: 320px;
+            height:24px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom:3px solid #F5F5F5;
+        }
+        .section2 .section2Right .aboutUs span::before{
+            content: url("http://www.7006.top/style/images/symbol-5.png");
+            position: relative;
+            top:1px;
+            left: -2px;
+        }
+        .section2 .section2Right .aboutUs span{
+            line-height: 22px;
+            height:22px;
+            margin-left: 3px;
+            padding-bottom: 4px;
+            font-size: 18px;
+            color: #3C3B3C;
+            border-bottom: 3px solid #00AA98;
+        }
+        .section2 .section2Right .aboutContent{
+            width: 320px;
+            height: 361px;
+            margin-top: 20px;
+            background-color: #F4F4F4;
+        }
+        .section2 .section2Right .aboutContent p{
+            padding: 25px 0;
+            text-align: center;
+        }
+        .section2 .section2Right .aboutContent .aboutImg{
+            text-align: center;
+        }
+        .section2 .section2Right .aboutContent .aboutImg .aboutImg1{
+            margin-right: 30px;
+        }
+        .section2 .section2Right .aboutContent .weibo{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .section2 .section2Right .aboutContent .weibo img{
+            margin-right: 30px;
+        }
+        /******************section3***************************/
+        .section3{
+            margin-top: 25px;
+            overflow: hidden;
+        }
+        .section3 .section3Left{
+            float: left;
+            width:820px;
+        }
+        .section3 .section3Right{
+            float: left;
+            margin-left: 20px;
+            width: 320px;
+        }
+        .section3 .hot{
+            width: 820px;
+            height:24px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom:3px solid #F5F5F5;
+        }
+        .section3 .hot span::before{
+            content: url("http://www.7006.top/style/images/symbol-6.png");
+            position: relative;
+            top:1px;
+            left: -2px;
+        }
+        .section3 .hot span{
+            line-height: 22px;
+            height:22px;
+            margin-left: 3px;
+            padding-bottom: 9px;
+            font-size: 18px;
+            color: #3C3B3C;
+            border-bottom: 3px solid #00AA98;
+        }
+        .section3 .section3Left .hotRecommend{
+            width: 800px;
+            padding-right: 20px;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv{
+            padding: 10px 10px 10px 0;
+            overflow: hidden;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxLeft{
+            width: 250px;
+            height: 165px;
+            float: left;
+            position: relative;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxLeft .hotMark{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 68px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #00AA98;
+            color: #ffffff;
+            font-size: 14px;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxLeft img{
+            width: 100%;
+            height: 100%;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxRight{
+            float: left;
+            width: 500px;
+            margin-left: 30px;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxRight h3{
+            height: 35px;
+            line-height: 35px;
+            font-weight: bold;
+            font-size: 18px;
 
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxRight h3 a:hover{
+            color: #0FAF9E;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxRight h3 a{
+            color: #000;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxRight p{
+            color: #3e3e3e;
+            font-size: 14px;
+            height: 102px;
+            line-height: 26px;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxRight span{
+            font-size: 12px;
+            margin-right: 20px ;
+        }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxRight .hotSpan1::before{
+             content: url("http://www.7006.top/style/images/symbol-9.png") "作者:";
+             position: relative;
+            top:0;
+            left: -5px;
+         }
+        .section3 .section3Left .hotRecommend .hotDiv .hotBoxRight .hotSpan2::before{
+            content: url("http://www.7006.top/style/images/symbol-11.png");
+            position: relative;
+            top:2px;
+            left: -5px
+        }
+        .section3 .section3Right .rRt{
+            width: 320px;
+        }
+        .section3 .section3Right .rRt span::before{
+            content: url("http://www.7006.top/style/images/symbol-3.png");
+            position: relative;
+            top:1px;
+            left: -2px;
+        }
+        .section3 .section3Right .readRecommend .readRsmallDiv{
+            margin: 10px 0;
+            width: 320px;
+            height:98px;
+            /*overflow: hidden;*/
+        }
+        .section3 .section3Right .readRecommend .readRsmallDiv{
+            border-bottom: 1px dashed #EEEEEE;
+        }
+        .section3 .section3Right .readRecommend .readRsmallDiv p{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .section3 .section3Right .readRecommend .readRsmallDiv p a{
+            color: black;
+        }
+        .section3 .section3Right .readRecommend .readRsmallDiv p a:hover{
+            color: #00AA98;
+        }
+        .section3 .section3Right .readRecommend .readRsmallDiv .readRD{
+            width: 320px;
+            height:66px;
+        }
+        .section3 .section3Right .readRecommend .readRsmallDiv .readRD img{
+            width: 94px;
+            height:63px;
+            float: left;
+        }
+        .section3 .section3Right .readRecommend .readRsmallDiv .readRD p{
+            width: 200px;
+            font-size: 12px;
+            line-height: 20px;
+            float: left;
+            color: #696969;
+            margin-left: 10px;
+            margin-top: 0;
+        }
+
+        .section3 .section3Right .div1{
+            margin-bottom: 20px;
+        }
+        .section3 .section3Right .together{
+            width: 320px;
+        }
+        .section3 .section3Right .together a{
+            font-size: 12px;
+            margin-left: 130px;
+            color: #A5A8AE;
+            /*box-sizing: border-box;*/
+        }
+        .section3 .section3Right .div2{
+            padding: 15px 0;
+            width: 320px;
+            height:333px;
+        }
+        .section3 .section3Right .div2 .div2Small{
+            width: 75px;
+            margin: 0 15px;
+        }
+        .section3 .section3Right .div2 .div2Small .imgDiv{
+            width: 79px;
+            height:79px;
+            padding: 2px;
+            border: 1px solid #0FAF9E;
+            margin: auto;
+        }
+        .section3 .section3Right .div2 .div2Small .imgDiv img{
+            width: 100%;
+            height:100%;
+        }
+        .section3 .section3Right .div2 .div2Small{
+            float: left;
+        }
+        .section3 .section3Right .div2 .div2Small p{
+            text-align: center;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        .section3 .section3Right .yun{
+            width: 320px;
+            padding-bottom: 12px;
+        }
+        .section3 .section3Right .yun span::before{
+            content: url("http://www.7006.top/style/images/symbol-13.png");
+            position: relative;
+            top:3px;
+            left: -2px;
+        }
+        .section3 .section3Right .qNews{
+            width: 320px;
+            height:280px;
+            margin-top: 25px;
+            background: url('http://www.7006.top/style/images/symbol-12.png') no-repeat 0 10px;
+        }
+        .section3 .section3Right .qNews li{
+            height: 44px;
+            line-height: 44px;
+            text-indent: 35px;
+            font-size: 14px;
+            border-bottom: 1px solid #f2f4f5;
+        }
+        .section3 .section3Right .qNews li a{
+            color: black;
+            font-weight: bolder;
+        }
+        .section3 .section3Right .brand{
+            width: 320px;
+            padding-bottom: 12px;
+        }
+        .section3 .section3Right .brand span::before{
+            content: url("http://www.7006.top/style/images/symbol-5.png");
+            position: relative;
+            top:3px;
+            left: -2px;
+        }
+        .section3 .section3Right .div3{
+            width: 320px;
+            height:350px;
+        }
+        .section3 .section3Right .div3 img{
+            width: 320px;
+            height:350px;
+        }
+        .section4{
+            width: 1150px;
+            /*height: 200px;*/
+            padding-top: 20px;
+        }
+        .section4 .div4{
+            background: url("http://www.7006.top/style/images/partnerstitle.png") no-repeat;
+            width: 100%;
+            /*height: 100%;*/
+            background-size: 100% 100%;
+            height: 37px;
+        }
+        .section4 .div5{
+            width: 1150px;
+            height: 56px;
+            /*padding-bottom: 20px;*/
+            /*overflow: hidden;*/
+        }
+        .section4 .div5 .div5_1{
+            float: left;
+            border: 1px solid #EEEDED;
+            margin: 20px 6px;
+        }
+        .section4 .div6{
+            background: url(" http://www.7006.top/style/images/linkstitle.png") no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            height: 36px;
+            margin-top: 50px;
+        }
+        .section4 ul{
+            margin-top: 20px;
+            height: 60px;
+        }
+        .section4 ul li{
+            float: left;
+            font-size: 14px;
+            margin: 5px 10px;
+        }
+        .section4 ul li a{
+            color: black;
+        }
+        .section4 ul li a:hover{
+            color: #00AA98;
+        }
+        .footer{
+            width: 100%;
+            height: 56px;
+            background-color: #3E3E3E;
+        }
+        .footer .footerLeft{
+            /*width: 370px;*/
+            line-height: 56px;
+            font-size: 14px;
+            color: #8f8f8f;
+            margin-left: 190px;
+            float: left;
+        }
+        .footer .footerRight{
+            float: left;
+            margin-left: 200px;
+        }
+        .footer .footerRight a{
+            color: #8f8f8f;
+            font-size: 14px;
+            line-height: 56px;
+        }
+        .footer .footerRight span{
+            display: inline-block;
+            background: url("http://www.7006.top/style/images/line2.png") no-repeat 0 10px;
+            width: 2px;
+            height: 20px;
+            margin: 0 2px;
+        }
+        .backTop{
+            width: 36px;
+            height:48px;
+            background: url("http://www.7006.top/style/images/side-icon02.png") #00AA98 no-repeat center center;
+            position: fixed;
+            bottom:67px;
+            right: 130px;
+        }
+        .code{
+            width: 36px;
+            height: 48px;
+            background: url("http://www.7006.top/style/images/side-icon01.png") no-repeat center #DADBDD;
+            position: fixed;
+            bottom:120px;
+            right: 130px;
+        }
+        .bigCode{
+            width: 270px;
+            height: 335px;
+            background: url("http://www.7006.top/style/images/icon.png") -4px -3px no-repeat;
+            position: fixed;
+            bottom:67px;
+            right: 170px;
+            display: none;
+        }
     </style>
 </head>
 <body>
 <div class="all">
-    <iframe src="nav.html">
-        <!--nav的高是60-->
-    </iframe>
+    <div class="wrap_nav">
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="" style="width: 138px; height:60px" >
+            </div>
+            <div class="left_guide">
+                <li class="nav_li"><a class="li_a" href="">首页</a>
+
+
+                </li>
+                <li id="GD_up" class="nav_li view"><a class="li_a" href="">观点</a>
+                    <ul id="GD_down" class="nav_li_bottom">
+                        <li><a href="../viewpoint.htmll#/viewpoint/point/1">观点</a></li>
+                        <li><a href="../viewpoint.html#/viewpoint/dianshang/1">电商</a></li>
+                        <li><a href="../viewpoint.html#/viewpoint/chuanmei/1">传媒</a></li>
+                        <li><a href="../viewpoint.html#/viewpoint/tongxin/1">通信</a></li>
+                    </ul>
+
+                </li>
+                <li id="CT_up" class="nav_li venture"><a class="li_a" href="">创投</a>
+                    <ul id="CT_down" class="nav_li_bottom">
+                        <li><a href="../viewpoint.html#/venture/chuangtou/1">创业</a></li>
+                        <li><a href="../viewpoint.html#/venture/renwu/1">人物</a></li>
+                        <li><a href="../viewpoint.html#/venture/jinrong/1">金融</a></li>
+                        <li><a href="../viewpoint.html#/venture/touzi/1">投资</a></li>
+                    </ul>
+                </li>
+                <li id="SY_up" class="nav_li business"><a class="li_a" href="">商业</a>
+                    <ul id="SY_down" class="nav_li_bottom">
+                        <li><a href="../viewpoint.html#/business/business/1">商业</a></li>
+                        <li><a href="../viewpoint.html#/business/anli/1">案例</a></li>
+
+                    </ul>
+                </li>
+                <li id="ZK_up" class="nav_li case"><a class="li_a" href="">智客</a>
+                    <ul id="ZK_down" class="nav_li_bottom">
+                        <li><a href="../viewpoint.htmll#/case/jingxuan/1">精选</a></li>
+                        <li><a href="../viewpoint.html#/case/ceping/1">评测</a></li>
+                    </ul>
+                </li>
+                <li id="KB_up" class="nav_li newspaper"><a class="li_a" href="">快报</a>
+                    <ul id="KB_down" class="nav_li_bottom">
+                        <li><a href="">业界</a></li>
+                        <li><a href="">手机</a></li>
+                        <li><a href="">家电</a></li>
+                        <li><a href="">手游</a></li>
+                        <li><a href="">运行</a></li>
+                        <li><a href="">即时</a></li>
+                    </ul>
+                </li>
+                <li id="D_up" class="nav_li more"><a class="li_a" href="">更多<img src="三角.png" style="width:25px;
+            height:25px;position: relative; top: 6px;"></a>
+                    <ul id="D_down" class="nav_li_bottom">
+                        <li><a href="">滚动新闻</a></li>
+                        <li><a href="">聚合标签</a></li>
+                        <li><a href="">排行榜</a></li>
+                    </ul>
+                </li>
+
+
+            </div>
+
+            <div class="right_guide">
+                <div class="contribute">
+
+                    <a href=""><span class="span_con">投稿</span></a>
+                </div>
+                <div id="Account" class="account">
+                    <a href=""><span class="span_acc">账户</span>
+                        <img id="black_angle" src="三角.png" alt="" style="width:25px;
+            height:25px;position: relative; top: 6px;"></a>
+                    <ul id="Account_down" class="nav_li_bottom1">
+                        <li class="register"><a href="">注册</a></li>
+                        <li class="log"><a href="">登陆</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </nav>
+    </div>
     <div class="wrap">
         <header>
             <div class="swiper-container">
@@ -272,6 +987,10 @@
                         <a href="http://www.7006.top/news/trend/646.html">5G网有望在2020年准备就绪</a>
                     </div>
                 </div>
+            </div>
+            <div class="search">
+                <input type="text" id="tSearch">
+                <button><img src="http://www.7006.top/style/images/btn-msearch.png" alt=""></button>
             </div>
         </header>
         <section class="section1">
@@ -344,6 +1063,14 @@
                         <div class="title">
                             <span class="news5"></span>
                             发展战略级的概念，“互联网+”最
+<<<<<<< HEAD
+                        </div>
+                        <div id="content5" class="content">
+                            有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
+                            走进报社人事处上缴伴随自己12年的记者证时，内心一度纠结成团，原本战斗力满满的生活
+                            似乎要刹那被抽...
+                        </div>
+=======
                         </div>
                         <div id="content5" class="content">
                             有人说我是个纸媒逃兵，OK，I don't care。事实也的确如此，两年前的仲夏当我
@@ -352,29 +1079,390 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
-
+            <div class="diguo">
+                <img src="img/帝国cms.jpg" alt="">
+                <img src="img/thereport.jpg" alt="" class="thereport">
+                <img src="img/longmark.jpg" alt="" class="longmark">
+            </div>
         </section>
-        <section class="section2"></section>
-        <section class="section3"></section>
+        <section class="section2">
+            <div class="section2Left">
+                <div class="read">
+                    <span>精选导读</span>
+                </div>
+                <div class="readDiv" id="readDiv">
+                    <!--<div class="readSmallDiv">-->
+                    <!--<img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/c0787f3a1fe29c07f9ccd86b7c474fb7.jpg" alt="">-->
+                    <!--<div class="readTitle">-->
+                    <!--<h3><a href="http://www.7006.top/news/shouyou/475.html">开炮，全球首款小游戏社交APP正式上线</a></h3>-->
+                    <!--<p>由鲲磐网络自主研发的全球首款小游戏社交APP“开炮”正式上线，将陌生人社交...</p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="section2Right">
+                <div class="aboutUs">
+                    <span>关注我们</span>
+                </div>
+                <div class="aboutContent">
+                    <p>关注微信公众号,了解最新精彩内容</p>
+                    <div class="aboutImg">
+                        <img src="http://www.7006.top/style/images/qr1.jpg" alt="" class="aboutImg1">
+                        <img src="http://www.7006.top/style/images/qr2.jpg" alt="">
+                    </div>
+                    <div class="weibo">
+                        <img src="http://www.7006.top/style/images/wb1.png" alt="">
+                        <img src="http://www.7006.top/style/images/wb2.png" alt="">
+                        <img src="http://www.7006.top/style/images/subscription.png" alt="">
+>>>>>>> 83ffd4c76084d55b4a09417782541636ad26d161
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="section3Left">
+                <div class="hot">
+                    <span>热门推荐</span>
+                </div>
+                <div class="hotRecommend" id="hotRecommend">
+                    <!--<div class="hotDiv">-->
+                        <!--<div class="hotBoxLeft">-->
+                            <!--<div class="hotMark">手游</div>-->
+                            <!--<img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/606f065a8fdbd27d8acc60596312f702.jpg" alt="">-->
+                        <!--</div>-->
+                        <!--<div class="hotBoxRight">-->
+                            <!--<h3><a href="http://www.7006.top/news/shouyou/461.html">2015年游戏行业风向标：创业者必须关注的几个方向</a></h3>-->
+                            <!--<p> 今天是春节开工第一天，正所谓开门大吉。新的一年总有些新的变化，在经历了短暂的停顿之后，大家又要重回紧张的工作。而身为一个游戏...</p>-->
+                            <!--<span class="hotSpan1">阿虎</span>-->
+                            <!--<span class="hotSpan2">2015-03-28 12:44</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="section3Right">
+                <div class="hot rRt">
+                    <span>阅读推荐</span>
+                </div>
+                <div class="readRecommend" id="readRecommend">
+                        <!--<div class="readRsmallDiv">-->
+                            <!--<p><a href="http://www.7006.top/view/media/139.html"></a>ZOL卖15亿，垂直网媒的未来在哪里</p>-->
+                            <!--<div class="readRD">-->
+                                <!--<img src="http://www.7006.top/d/file/view/media/2015-03-27/a1cba3cb62c9e9a7fd18c4739658cb12.jpg" alt="">-->
+                                <!--<p>3月18日早上，一条小消息，撩拨着行业媒体的大神经。今天早上，慧聪网发布公告称，已经与IT垂直门户....</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                </div>
+                <div class="div1">
+                    <img src="http://www.7006.top/style/images/index_v4.jpg" alt="">
+                </div>
+                <div class="hot together">
+                    <span>名家专栏</span>
+                    <a href="">在这与他们同行</a>
+                </div>
+                <ul class="div2">
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e1.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>马云</p>
+                    </li>
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>马化腾</p>
+                    </li>
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e3.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>李彦宏</p>
+                    </li>
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e4.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>刘强东</p>
+                    </li>
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e5.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>丁磊</p>
+                    </li>
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e6.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>张朝阳</p>
+                    </li>
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e7.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>陈天桥</p>
+                    </li>
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e8.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>周鸿伟</p>
+                    </li>
+                    <li class="div2Small">
+                        <div class="imgDiv">
+                            <a href="http://www.7006.top/e/tags/?tagid=1">
+                                <img src="img/e9.jpg" alt="">
+                            </a>
+                        </div>
+                        <p>雷军</p>
+                    </li>
+                </ul>
+                <div class="hot yun">
+                    <span>科技快报</span>
+                </div>
+                <ul class="qNews">
+                    <li><a href="http://www.7006.top/news/trend/622.html">Notel：朝鲜流行的中国造播放器，能偷</a></li>
+                    <li><a href="http://www.7006.top/news/trend/622.html">5G网有望在2020年准备就绪</a></li>
+                    <li><a href="http://www.7006.top/news/trend/622.html">Notel：朝鲜流行的中国造播放器，能偷</a></li>
+                    <li><a href="http://www.7006.top/news/trend/622.html">5G网有望在2020年准备就绪</a></li>
+                    <li><a href="http://www.7006.top/news/trend/622.html">美国人的生活里大数据都改变了什么</a></li>
+                    <li><a href="http://www.7006.top/news/trend/622.html">“互联网+”：最好的时代 or 最坏的</a></li>
+                </ul>
+                <div class="hot brand">
+                    <span>品牌展示</span>
+                </div>
+                <div class="div3">
+                    <img src="http://www.7006.top/style/images/index_v5.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section4">
+            <div class="div4"></div>
+            <div class="div5">
+                <div class="div5_1">
+                    <img src="img/link_logo1.jpg" alt="">
+                </div>
+                <div class="div5_1">
+                    <img src="img/link_logo2.jpg" alt="">
+                </div>
+                <div class="div5_1">
+                    <img src="img/link_logo3.jpg" alt="">
+                </div>
+                <div class="div5_1">
+                    <img src="img/link_logo4.jpg" alt="">
+                </div>
+                <div class="div5_1">
+                    <img src="img/link_logo5.jpg" alt="">
+                </div>
+                <div class="div5_1">
+                    <img src="img/link_logo6.jpg" alt="">
+                </div>
+                <div class="div5_1">
+                    <img src="img/link_logo7.jpg" alt="">
+                </div>
+                <div class="div5_1">
+                    <img src="img/link_logo8.jpg" alt="">
+                </div>
+            </div>
+            <div class="div4 div6"></div>
+            <ul>
+                <li><a href="http://tech.sina.com.cn/">搜狐IT</a></li>
+                <li><a href="http://tech.sina.com.cn/">新浪科技</a></li>
+                <li><a href="http://tech.sina.com.cn/">中国科技网</a></li>
+                <li><a href="http://tech.sina.com.cn/">腾讯</a></li>
+                <li><a href="http://tech.sina.com.cn/">凤凰科技</a></li>
+                <li><a href="http://tech.sina.com.cn/">网易</a></li>
+                <li><a href="http://tech.sina.com.cn/">牛华网</a></li>
+                <li><a href="http://tech.sina.com.cn/">IT时代周刊</a></li>
+                <li><a href="http://tech.sina.com.cn/">科技资讯网</a></li>
+                <li><a href="http://tech.sina.com.cn/">科学中国</a></li>
+                <li><a href="http://tech.sina.com.cn/">艾瑞网</a></li>
+                <li><a href="http://tech.sina.com.cn/">TechWeb</a></li>
+                <li><a href="http://tech.sina.com.cn/">和讯科技</a></li>
+                <li><a href="http://tech.sina.com.cn/">光明科技</a></li>
+                <li><a href="http://tech.sina.com.cn/">学生科技网</a></li>
+                <li><a href="http://tech.sina.com.cn/">MSN中国科技频道</a></li>
+                <li><a href="http://tech.sina.com.cn/">虎嗅网</a></li>
+                <li><a href="http://tech.sina.com.cn/">观察者网</a></li>
+            </ul>
+        </section>
     </div>
+    <div class="footer">
+        <div class="footerLeft">© 2013-2015 科讯网（www.7006.top）版权所有  备案：皖ICP备15010744号</div>
+        <div class="footerRight">
+            <a href="">关于我们</a>
+            <span></span>
+            <a href="">联系我们</a>
+            <span></span>
+            <a href="">商务合作</a>
+            <span></span>
+            <a href="">寻求报道</a>
+            <span></span>
+            <a href="">投稿须知</a>
+            <span></span>
+            <a href="">版权声明</a>
+            <span></span>
+            <a href="">网站地图</a>
+            <span></span>
+            <a href="">站长统计</a>
+        </div>
+    </div>
+    <div class="backTop" id="backTop"></div>
+    <div class="code" id="code"></div>
+    <div class="bigCode" id="bigCode"></div>
 </div>
 <script src="js/swiper.min.js"></script>
 <script src="js/ajax.js"></script>
 <script type="text/javascript">
+    var GD_up =document.getElementById("GD_up");
+    var GD_down = document.getElementById("GD_down");
+    var D_up =document.getElementById("D_up");
+    var D_down = document.getElementById("D_down");
+    var CT_up =document.getElementById("CT_up");
+    var CT_down = document.getElementById("CT_down");
+    var SY_up =document.getElementById("SY_up");
+    var SY_down = document.getElementById("SY_down");
+    var ZK_up =document.getElementById("ZK_up");
+    var ZK_down = document.getElementById("ZK_down");
+    var KB_up =document.getElementById("KB_up");
+    var KB_down = document.getElementById("KB_down");
+    var black_angle = document.getElementById("black_angle");
+    var Account = document.getElementById("Account");
+    var Account_down = document.getElementById("Account_down")
+    GD_up.onmouseover =function () {
+        GD_down.style.display = "block"
+    }
+    GD_up.onmouseout = function () {
+        GD_down.style.display = "none"
+    }
+    D_up.onmouseover =function () {
+        D_down.style.display = "block"
+    }
+    D_up.onmouseout = function () {
+        D_down.style.display = "none"
+    }
+    CT_up.onmouseover =function () {
+        CT_down.style.display = "block"
+    }
+    CT_up.onmouseout = function () {
+        CT_down.style.display = "none"
+    }
+    SY_up.onmouseover =function () {
+        SY_down.style.display = "block"
+    }
+    SY_up.onmouseout = function () {
+        SY_down.style.display = "none"
+    }
+    ZK_up.onmouseover =function () {
+        ZK_down.style.display = "block"
+    }
+    ZK_up.onmouseout = function () {
+        ZK_down.style.display = "none"
+    }
+    KB_up.onmouseover =function () {
+        KB_down.style.display = "block"
+    }
+    KB_up.onmouseout = function () {
+        KB_down.style.display = "none"
+    }
+    Account.onmouseover=function () {
+        black_angle.src="黑三角.png"
+        Account_down.style.display = "block"
+    }
+    Account.onmouseout=function () {
+        black_angle.src="三角.png"
+        Account_down.style.display = "none"
+    }
 
-
-
-
-
-
-
-
-
+    var readDiv = document.getElementById("readDiv");
+    var hotRecommend = document.getElementById("hotRecommend");
+    var readRecommend = document.getElementById("readRecommend");
+    var backTop = document.getElementById("backTop");
+    var code = document.getElementById("code");
+    var bigCode = document.getElementById("bigCode");
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+        direction: 'vertical',
+        loop:true
+    });
+    ajax("post","http://localhost/0912php/abcd/index/route.php","type=0",function (data) {
+        var isJson = JSON.parse(data);
+//        console.log(isJson.swiper[0].imgSrc);
+        console.log(isJson);
+        /////////////////动态创建精选导读////////////////////////
+        for (var i =0;i<isJson.introduction.length;i++){
+            createReadDiv(isJson.introduction[i].img,isJson.introduction[i].title,isJson.introduction[i].content);
+        }
+        /////////////////动态创建热门推荐////////////////////////
+        for (var i =0;i<isJson.hotRecommend.length;i++){
+            createHotRDiv(isJson.hotRecommend[i].author,isJson.hotRecommend[i].content,isJson.hotRecommend[i].date,isJson.hotRecommend[i].img,isJson.hotRecommend[i].mark,isJson.hotRecommend[i].title);
+        }
+        /////////////////动态创建阅读推荐////////////////////////
+        for (var i =0;i<isJson.readRecommend.length;i++){
+            createReadRecommend(isJson.readRecommend[i].content,isJson.readRecommend[i].img,isJson.readRecommend[i].title);
+        }
+    })
+    //////////////////////// 大轮播图 /////////////////////////
+    var choose = document.getElementsByClassName("choose");
+    var showImg = document.getElementById("showImg");
+    var showA= document.getElementById("showA");
+    var showImgTextA= document.getElementById("showImgTextA");
+    var dataSw = [{imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/e8b145230d480caab9878fa665d1e96a.jpg",bigHref:"http://www.7006.top/view/opinion/605.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/5b39914316a2b88ab3f03011eafacd3f.jpg",bigHref:"http://www.7006.top/view/opinion/604.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/084bd9fcdbbe1742387819da96e879e7.jpg",bigHref:"http://www.7006.top/view/opinion/603.html"},
+        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/da58e2faca45f87be541e957295bd792.jpg",bigHref:"http://www.7006.top/view/opinion/602.html"}
+    ];
+    
+    for (var i = 0;i<choose.length;i++){
+        choose[i].onmouseover = (function (i) {
+            return  function () {
+                showImg.src = dataSw[i].imgSrc;
+                showA.href = dataSw[i].bigHref;
+                showImgTextA.innerHTML = choose[i].innerHTML;
+                showImgTextA.href = dataSw[i].bigHref;
+                for(var j = 0;j< choose.length;j++){
+                    choose[j].style.opacity = 0.7;
+                }
+                choose[i].style.opacity = 1;
+            }
+        })(i)
+    }
+    var timerBigShow = null;
+    var bigShowindex = 1;
+    timerBigShow = setInterval(function () {
+        if (bigShowindex >= 4){
+            bigShowindex = 0
+        }
+        for(var i = 0;i <choose.length;i++){
+            choose[i].style.opacity = 0.7;
+        }
+        showImg.src = dataSw[bigShowindex].imgSrc;
+        showImgTextA.innerHTML = choose[bigShowindex].innerHTML;
+        showImg.src = dataSw[bigShowindex].imgSrc;
+        showImgTextA.href = dataSw[bigShowindex].bigHref;
+        choose[bigShowindex].style.opacity = 1;
+        bigShowindex++;
+    },2000)
     var dad = document.getElementById("dad");
     var dad1 = document.getElementById("dad1");
     var dad2 = document.getElementById("dad2");
@@ -422,105 +1510,104 @@
         content4.style.height = "0"
         content5.style.height = "75px"
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
-
-
-    var swiper = new Swiper('.swiper-container', {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false,
-        direction: 'vertical',
-        loop:true
-    });
-   /* ajax("post","http://localhost/kxw/index/route.php","type=0",function (data) {
-        var isJson = JSON.parse(data);
-//        console.log(isJson.swiper[0].imgSrc);
-        console.log(isJson);
-    });*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*--------------------------------------------------*/
-    var choose = document.getElementsByClassName("choose");
-    var showImg = document.getElementById("showImg");
-    var showA= document.getElementById("showA");
-    var showImgTextA= document.getElementById("showImgTextA");
-    var dataSw = [{imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/e8b145230d480caab9878fa665d1e96a.jpg",bigHref:"http://www.7006.top/view/opinion/605.html"},
-        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/5b39914316a2b88ab3f03011eafacd3f.jpg",bigHref:"http://www.7006.top/view/opinion/604.html"},
-        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/084bd9fcdbbe1742387819da96e879e7.jpg",bigHref:"http://www.7006.top/view/opinion/603.html"},
-        {imgSrc:"http://www.7006.top/d/file/view/opinion/2015-03-28/da58e2faca45f87be541e957295bd792.jpg",bigHref:"http://www.7006.top/view/opinion/602.html"}
-    ];
-
-
-    for (var i = 0;i<choose.length;i++){
-        choose[i].onmouseover = (function (i) {
-            return  function () {
-                showImg.src = dataSw[i].imgSrc;
-                showA.href = dataSw[i].bigHref;
-                showImgTextA.innerHTML = choose[i].innerHTML;
-                showImgTextA.href = dataSw[i].bigHref;
-                for(var j = 0;j< choose.length;j++){
-                    choose[j].style.opacity = 0.7;
-                }
-                choose[i].style.opacity = 1;
-            }
-        })(i)
+    /////////////////动态创建精选导读////////////////////////
+    function createReadDiv(img,title,content) {
+        var smallDiv = document.createElement("div");
+        smallDiv.setAttribute("class","readSmallDiv");
+        var smallImg = new Image();
+        smallImg.src = img;
+        var smallTitle = document.createElement("div");
+        smallTitle.setAttribute("class","readTitle");
+        var smallH3 = document.createElement("h3");
+        var smallA = document.createElement("a");
+        smallA.href="http://www.7006.top/news/shouyou/475.html";
+        smallA.innerHTML=title;
+        var smallP = document.createElement("p");
+        smallP.innerHTML=content;
+        smallH3.appendChild(smallA);
+        smallTitle.appendChild(smallH3);
+        smallTitle.appendChild(smallP);
+        smallDiv.appendChild(smallImg);
+        smallDiv.appendChild(smallTitle);
+        readDiv.appendChild(smallDiv);
     }
-    var timerBigShow = null;
-    var bigShowindex = 1;
-    timerBigShow = setInterval(function () {
-        if (bigShowindex >= 4){
-            bigShowindex = 0
+    /////////////////动态创建热门推荐////////////////////////
+    function createHotRDiv(author,content,date,img,mark,title) {
+        var hotDiv = document.createElement("div");
+        hotDiv.setAttribute("class","hotDiv");
+        var hotBoxLeft = document.createElement("div");
+        hotBoxLeft.setAttribute("class","hotBoxLeft");
+        var hotMark = document.createElement("div");
+        hotMark.setAttribute("class","hotMark");
+        hotMark.innerHTML=mark;
+        var smallImg = new Image();
+        smallImg.src = img;
+        hotBoxLeft.appendChild(hotMark);
+        hotBoxLeft.appendChild(smallImg);
+        var hotBoxRight = document.createElement("div");
+        hotBoxRight.setAttribute("class","hotBoxRight");
+        var smallH3 = document.createElement("h3");
+        var smallA = document.createElement("a");
+        smallA.href="http://www.7006.top/news/shouyou/461.html";
+        smallA.innerHTML=title;
+        smallH3.appendChild(smallA);
+        var smallP = document.createElement("p");
+        smallP.innerHTML=content;
+        var span1 = document.createElement("span");
+        span1.setAttribute("class","hotSpan1");
+        span1.innerHTML=author;
+        var span2 = document.createElement("span");
+        span2.setAttribute("class","hotSpan2");
+        span2.innerHTML=date;
+        hotBoxRight.appendChild(smallH3);
+        hotBoxRight.appendChild(smallP);
+        hotBoxRight.appendChild(span1);
+        hotBoxRight.appendChild(span2);
+        hotDiv.appendChild(hotBoxLeft);
+        hotDiv.appendChild(hotBoxRight);
+        hotRecommend.appendChild(hotDiv);
+    }
+    /////////////////动态创建阅读推荐////////////////////////
+    function createReadRecommend(content,img,title) {
+        var readRsmallDiv = document.createElement("div");
+        readRsmallDiv.setAttribute("class","readRsmallDiv");
+        var smallP = document.createElement("p");
+        var smallA = document.createElement("a");
+        smallA.href="http://www.7006.top/view/media/139.html";
+        smallA.innerHTML=title;
+        var readRD = document.createElement("div");
+        readRD.setAttribute("class","readRD");
+        var smallImg = new Image();
+        smallImg.src = img;
+        var smallpp=document.createElement("p")
+        smallpp.innerHTML=content;
+        smallP.appendChild(smallA);
+        readRD.appendChild(smallImg);
+        readRD.appendChild(smallpp);
+        readRsmallDiv.appendChild(smallP);
+        readRsmallDiv.appendChild(readRD);
+        readRecommend.appendChild(readRsmallDiv);
+    }
+    var speed = 25;
+    backTop.onclick=function () {
+        var backTimer=setInterval(function () {
+            var theTop = document.body.scrollTop;
+            if (theTop<=0){
+                clearInterval(backTimer);
+            }else {
+                document.body.scrollTop=theTop-speed;
+            }
+        },10);
+    }
+    var isTrue = false;
+    code.onclick=function () {
+        isTrue=!isTrue;
+        if (isTrue){
+            bigCode.style.display="block";
+        }else {
+            bigCode.style.display="none";
         }
-        for(var i = 0;i <choose.length;i++){
-            choose[i].style.opacity = 0.7;
-        }
-        showImg.src = dataSw[bigShowindex].imgSrc;
-        showImgTextA.innerHTML = choose[bigShowindex].innerHTML;
-        showImg.src = dataSw[bigShowindex].imgSrc;
-        showImgTextA.href = dataSw[bigShowindex].bigHref;
-        choose[bigShowindex].style.opacity = 1;
-        bigShowindex++;
-    },2000)
-
-
-
-
-
-
-
+    }
 </script>
 </body>
 </html>
