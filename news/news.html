@@ -3,32 +3,530 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <script src="../angular.js"></script>
+    <script src="../angular-route.js"></script>
+    <style type="text/css">
         *{
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
         body{
-            width:100%;
-            height:100%;
-            background-image: url("page_bg副本 2.jpg");
-            background-color:#f2f2f2;
-            background-repeat: no-repeat;
+            width: 100%;
+
         }
-        iframe{
-            width:100%;
-            height:100%;
-            border:none;
-            scrolling:"no";
+        /*.all{*/
+            /*background-color: #F2F2F2;*/
+        /*}*/
+        .all .nav{
+            width: 100%;
+            height:37px;
+            background-color: #3B3B3B;
             position: fixed;
             top:0;
-            left: 0;
+            left:0;
+            z-index: 1000;
         }
+        .all .nav .smallNav{
+            width: 1200px;
+            margin: 0 auto;
+            /*padding-top:5px ;*/
+            box-sizing: border-box;
+        }
+        .all .nav .smallNav .navLeft{
+            float: left;
+        }
+        .all .nav .smallNav .navLeft a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            padding: 7px 10px 8px 10px;
+            box-sizing: border-box;
+        }
+        .all .nav .smallNav .navLeft a:hover{
+            background-color: #00AA98;
+        }
+        .all .nav .smallNav .navLeft  .navLA::after{
+            content: url("http://www.7006.top/style/css/imga/r2_c4.jpg");
+            position: relative;
+            top:2px;
+            left:10px;
+        }
+        .all .nav .smallNav .navRight{
+            float: right;
+            padding-bottom: 5px;
+        }
+        .all .nav .smallNav .navRight a{
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            padding: 7px 10px 8px 10px;
+            box-sizing: border-box;
+        }
+        .all .nav .smallNav .navRight a:hover{
+            background-color: #00AA98;
+        }
+        .all .nav .smallNav .navRight .navA1::before{
+            content: url("http://www.7006.top/style/css/imga/r_uer2_c4.jpg");
+            position: relative;
+            top:3px;
+            left: -5px;
+        }
+        .all .topbar{
+            width: 100%;
+            height:90px;
+            margin-top: 40px;
+            background-color: #FFFFFF;
+            border-bottom: 3px solid #DBDBDB;
+        }
+        .all .topbar .topbar1{
+            width: 1200px;
+            margin: auto;
+        }
+        .all .topbar .topbar1 a{
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .all .topbar .topbar1 a img{
+            width: 162px;
+            height: 40px;
+        }
+        .all .topbar .topbar1 .topbarA{
+            display: inline-block;
+            margin-left: 450px;
+        }
+        .all .topbar .topbar1 .topbarA a{
+            color: white;
+            text-decoration: none;
+            width: 100px;
+            height: 40px;
+            background-color: #00AA98;
+            line-height: 40px;
+            text-align: center;
+            margin-left: 20px;
+            float: left;
+        }
+        .all .topbar .topbar1 .topbarA a:hover{
+            background-color: #333300;
+        }
+
+        /*----------------*/
+        .backWhite{
+            width: 1150px;
+            padding: 0 25px;
+            background-color: #fff;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        .pageLeft{
+            float: left;
+            width: 770px;
+            padding-top: 60px;
+            padding-right: 30px;
+            border-right: 1px solid #E5E5E5;
+            position: relative;
+        }
+        .pageRight{
+            float: right;
+            display: inline;
+            width: 320px;
+        }
+        .ad1{
+            margin-top: 20px;
+        }
+        .ad1 img{
+            width: 320px;
+            height: 250px;
+        }
+        .markTitle{
+            float: left;
+            width: 100px;
+            height: 32px;
+            line-height: 32px;
+            position: absolute;
+            top:0;
+            left: -25px;
+            background-color: #00AA98;
+            color: #fff;
+            text-align: center;
+        }
+        .anView{
+            width: 770px;
+            height: 180px;
+            padding: 10px 0;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .massageImg{
+            width: 250px;
+            height: 165px;
+            float: left;
+            display: inline;
+            margin-right: 30px;
+            position: relative;
+        }
+        .massageImg img{
+            width: 250px;
+            height: 165px;
+        }
+        .mark{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 68px;
+            height: 30px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #00AA98;
+            text-align: center;
+            line-height: 30px;
+        }
+        .messageTitle{
+            font-size: 18px;
+            font-weight: bold;
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 5px;
+        }
+        .messageTitleA{
+            outline: 0;
+            text-decoration: none;
+            color: #333;
+        }
+        .messageText{
+            color: #3e3e3e;
+            font-size: 14px;
+            height: 102px;
+            line-height: 26px;
+        }
+
+        .dir{
+            color: #3e3e3e;
+            width: 130px;
+            display: inline-block;
+        }
+        .pageBottem{
+            margin-top: 50px;
+        }
+        /*/////////////////////////////////////*/
+        .ad2{
+            margin-top: 20px;
+            margin-left: 0px;
+            position: relative;
+            background: #fff;
+        }
+        .adTitle{
+            border-bottom: 3px solid #F5F5F5;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+        .asSP{
+            border-bottom: 3px solid #00AA98;
+            padding-bottom: 7px;
+            font-size: 18px;
+            color: #3C3B3C;
+        }
+        .adImg{
+            position: relative;
+            top: 3px;
+            left: 0;
+            margin-right: 5px;
+        }
+        #ad2inner{
+            position: absolute;
+            top: -3px;
+            right: 0;
+            font-size: 16px;
+        }
+        .ad3{
+            padding-top: 20px;
+        }
+        .ad4 li{
+            float: left;
+            width: 153px;
+            height: 150px;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #6b6a6a;
+        }
+        .ad4 li img{
+            width: 150px;
+            height: 98px;
+        }
+        .ad4 li p{
+            height: 46px;
+            line-height: 23px;
+            overflow: hidden;
+        }
+        .ad5{
+            margin-top: 20px;
+        }
+        .ad5 img{
+            width: 320px;
+            height: 250px;
+        }
+        .weixin{
+            height: 240px;
+        }
+        .weixin span{
+            display: block;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 16px;
+            color: #4c4c4c;
+        }
+        .weixin img{
+            margin: 0 16px;
+        }
+        /*//////////////////////*/
+        .backTop{
+            width: 36px;
+            height:48px;
+            background: url("http://www.7006.top/style/images/side-icon02.png") #00AA98 no-repeat center center;
+            position: fixed;
+            bottom:67px;
+            right: 130px;
+        }
+        .code{
+            width: 36px;
+            height: 48px;
+            background: url("http://www.7006.top/style/images/side-icon01.png") no-repeat center #DADBDD;
+            position: fixed;
+            bottom:120px;
+            right: 130px;
+        }
+        .bigCode{
+            width: 270px;
+            height: 335px;
+            background: url("http://www.7006.top/style/images/icon.png") -4px -3px no-repeat;
+            position: fixed;
+            bottom:67px;
+            right: 170px;
+            display: none;
+        }
+        /*///////////////////////////*/
+        .footer{
+            width: 100%;
+            height: 56px;
+            background-color: #3E3E3E;
+        }
+        .footer .footerLeft{
+            /*width: 370px;*/
+            line-height: 56px;
+            font-size: 14px;
+            color: #8f8f8f;
+            margin-left: 190px;
+            float: left;
+        }
+        .footer .footerRight{
+            float: left;
+            margin-left: 200px;
+        }
+        .footer .footerRight a{
+            color: #8f8f8f;
+            font-size: 14px;
+            line-height: 56px;
+        }
+        .footer .footerRight span{
+            display: inline-block;
+            background: url("http://www.7006.top/style/images/line2.png") no-repeat 0 10px;
+            width: 2px;
+            height: 20px;
+            margin: 0 2px;
+        }
+
     </style>
 </head>
 <body>
-<iframe src="../index/nav.html">
-    <!--nav的高是60-->
-</iframe>
+    <div class="all" ng-app="myApp">
+        <div class="nav">
+            <div class="smallNav">
+                <div class="navLeft">
+                    <a href="http://www.7006.top/">科讯网</a>
+                    <a href="#/yejie/1">业界</a>
+                    <a href="#/phone/1">手机</a>
+                    <a href="#/jiadian/1">家电</a>
+                    <a href="#/shouyou/1">手游</a>
+                    <a href="#/yunying/1">运营</a>
+                    <a href="#/jishi/1">即时</a>
+                    <a href="http://www.7006.top/" class="navLA">更多</a>
+                </div>
+               <div class="navRight">
+                   <a href="###">欢迎:游客</a>
+                   <a href="###" class="navA1">登陆</a>
+                   <a href="###" class="navA2">注册</a>
+               </div>
+            </div>
+
+        </div>
+        <div class="topbar">
+            <div class="topbar1">
+                <a href="http://www.7006.top/"><img src="http://www.7006.top/style/css/imga/logo.jpg" alt=""></a>
+                <div class="topbarA">
+                    <a href="">申请报道</a>
+                    <a href="">在线投稿</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="backWhite" >
+            <!--左侧angular-->
+            <!--ng-view-->
+            <div class="pageLeft" ng-view>
+                <!--<div class="markTitle">-->
+                <!--观点-->
+                <!--</div>-->
+                <!--<div class="anView" >-->
+                <!--<div class="massageImg">-->
+                <!--<a href="">-->
+                <!--<img src="http://www.7006.top/d/file/view/opinion/2015-03-30/d6c074b1fa7b96ef389e0d7c7439d962.jpg" alt="">-->
+                <!--</a>-->
+                <!--<div class="mark">观点</div>-->
+                <!--</div>-->
+                <!--<div class="messageInner">-->
+                <!--<h1 class="messageTitle"><a href="" class="messageTitleA">押宝Apple Watch，智能手表游戏玩得转吗？</a></h1>-->
+                <!--<p class="messageText">如果你给法拉利跑车贴上金箔，会被认为是俗气。但若在Apple Watch上使用黄金，则被认为是高上大的象征。这家公司动辄上万美元的黄金智能手表，土豪金版iPhone和MacBook，让土豪们为之疯狂...</p>-->
+                <!--<span class="dir dir1">作者：<span class="athor">阿帆</span></span>-->
+                <!--<span class="time dir">2015-03-30 11:33</span>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+            <!--右侧广告-->
+            <div class="pageRight">
+                <div class="ad1">
+                    <img src="http://www.7006.top/style/images/imgad1.gif" alt="">
+                </div>
+                <div class="ad2">
+                    <div class="adTitle">
+                        <span class="asSP"><img src="http://www.7006.top/style/images/symbol-18.png" alt="" class="adImg">排行榜</span>
+                    </div>
+                    <div id="ad2inner">
+                        <span>月排行</span>
+                        <span>周排行</span>
+                        <span>日排行</span>
+                    </div>
+                </div>
+                <div class="ad3">
+                    <img src="http://www.7006.top/style/images/img15.jpg" alt="">
+                </div>
+                <div class="ad2">
+                    <div class="adTitle">
+                        <span class="asSP"><img src="http://www.7006.top/style/images/symbol-7.png" alt="" class="adImg">编辑推荐</span>
+                    </div>
+                </div>
+                <ul class="ad4">
+                    <li>
+                        <img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/606f065a8fdbd27d8acc60596312f702.jpg" alt="2015年游戏行业风向标：创业者必须关注的几个方向">
+                        <p>2015年游戏行业风向标：创业者必须关</p>
+                    </li>
+                    <li>
+                        <img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/f0063b44b52fece4d7a1a7e41be70d48.jpg" alt="山水文化资产遭封 游戏收购恐泡汤">
+                        <p>山水文化资产遭封 游戏收购恐泡汤</p>
+                    </li>
+                    <li>
+                        <img src="http://www.7006.top/d/file/news/mobile/2015-03-28/c193341fcbe5ddafed99b9396c343770.png" alt="三星将推Orbis智能手表">
+                        <p>三星将推Orbis智能手表</p>
+                    </li>
+                    <li>
+                        <img src="http://www.7006.top/d/file/news/mobile/2015-03-28/05679f7d33f1e28eb8d0b93f8c0dc67a.jpg" alt="世界上你没听说过的5款“小不点”手机">
+                        <p>世界上你没听说过的5款“小不点”手机</p>
+                    </li>
+                </ul>
+                <div class="ad5">
+                    <img src="http://www.7006.top/style/images/imgad2.gif" alt="">
+                </div>
+                <div class="ad2">
+                    <div class="adTitle">
+                        <span class="asSP"><img src="http://www.7006.top/style/images/symbol-5.png" alt="" class="adImg">关注我们</span>
+                    </div>
+                    <div class="weixin">
+                        <span>关注微信公众号，了解最新精彩内容</span>
+                        <p>
+                            <img src="http://www.7006.top/style/images/qr1.jpg" alt="">
+                            <img src="http://www.7006.top/style/images/qr2.jpg" alt="">
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--///////////////-->
+        <div class="backTop" id="backTop"></div>
+        <div class="code" id="code"></div>
+        <div class="bigCode" id="bigCode"></div>
+        <div class="footer">
+            <div class="footerLeft">© 2013-2015 科讯网（www.7006.top）版权所有  备案：皖ICP备15010744号</div>
+            <div class="footerRight">
+                <a href="">关于我们</a>
+                <span></span>
+                <a href="">联系我们</a>
+                <span></span>
+                <a href="">商务合作</a>
+                <span></span>
+                <a href="">寻求报道</a>
+                <span></span>
+                <a href="">投稿须知</a>
+                <span></span>
+                <a href="">版权声明</a>
+                <span></span>
+                <a href="">网站地图</a>
+                <span></span>
+                <a href="">站长统计</a>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="../ajax.js"></script>
+    <script type="text/javascript">
+        var myApp = angular.module("myApp",[
+            'ngRoute',
+            'yejie',
+            'phone',
+            'jiadian',
+            'shouyou',
+            'yunying',
+            'jishi'
+        ]);
+        myApp.config(['$routeProvider',function ($routeProvider) {
+            $routeProvider.otherwise({
+                redirectTo:'/yejie/1'//当链接后面不是指定连接时,则为
+            })
+        }])
+        var backTop = document.getElementById("backTop");
+        var code = document.getElementById("code");
+        var bigCode = document.getElementById("bigCode");
+        var speed = 25;
+        backTop.onclick=function () {
+            var backTimer=setInterval(function () {
+                var theTop = document.body.scrollTop;
+                if (theTop<=0){
+                    clearInterval(backTimer);
+                }else {
+                    document.body.scrollTop=theTop-speed;
+                }
+            },10);
+        }
+        var isTrue = false;
+        code.onclick=function () {
+            isTrue=!isTrue;
+            if (isTrue){
+                bigCode.style.display="block";
+            }else {
+                bigCode.style.display="none";
+            }
+        }
+
+    </script>
+    <script src="yejie/controller.js"></script>
+    <script src="phone/controller.js"></script>
+    <script src="jiadian/controller.js"></script>
+    <script src="shouyou/controller.js"></script>
+    <script src="yunying/controller.js"></script>
+    <script src="jishi/controller.js"></script>
 </body>
 </html>

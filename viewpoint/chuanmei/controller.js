@@ -21,7 +21,7 @@ module.controller('chuanmeiController', ['$scope','$route','$routeParams','$http
         }
     }
 
-    ajax("post","http://localhost/0912php/git/viewpoint/route.php","type=2",function (data) {
+    ajax("post","http://localhost/zlz/viewpoint/route.php","type=2",function (data) {
         var isJson = JSON.parse(data);
         //console.log(isJson);
         //page = 1;
@@ -31,16 +31,15 @@ module.controller('chuanmeiController', ['$scope','$route','$routeParams','$http
             //console.log(($scope.totalCount-((page-1)*10))/10)
         }else {
             $scope.pages = isJson.length;
-
         }
 
-            for(var i = (page-1) * 10;i< $scope.pages;i++){
-                if (i< 10){
-                    $scope.subjects[i] = isJson[i];
-                }else{
-                    $scope.subjects[i-(10*(page-1))] = isJson[i];
-                }
+        for(var i = (page-1) * 10;i< $scope.pages;i++){
+            if (i< 10){
+                $scope.subjects[i] = isJson[i];
+            }else{
+                $scope.subjects[i-(10*(page-1))] = isJson[i];
             }
+        }
         console.log(page)
         console.log($scope.subjects);
     })
