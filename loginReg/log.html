@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册会员</title>
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .log_wrap{
+            width:100%;
+        }
+        .log_nav{
+            width: 960px;
+            margin: 0 auto;
+            height: 76px;
+            /*float: left;*/
+            /*background-color: red;*/
+        }
+
+        hr{
+            height: 8px;
+            background-color: #00AA98;
+            border: none;
+            margin-bottom: 9px;
+        }
+        .log_nav .p{
+            float: left;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+        .log_nav .p p{
+            margin-top: 9px;
+        }
+        .log_nav .p p a{
+            text-decoration: none;
+        }
+        .right_p{
+            float: right;
+            font-size: 12px;
+            margin-top: 46px;
+        }
+        section{
+            width:960px;
+            margin: 0 auto;
+        }
+        section p{
+            font-size: 12px;
+            text-indent: 0.5em;
+            margin-bottom: 9px;
+        }
+        article{
+            width: 960px;
+            height: 420px;
+            border: solid 1px #08a7b9;
+        }
+        .asdie_left{
+            width: 204px;
+            height: 420px;
+            float: left;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .aside_right{
+            width:750px;
+            border-left:solid 1px #08a7b9 ;
+            height: 420px;
+            float: left;
+        }
+        .bk{
+            border: solid 1px #08a7b9;
+            padding: 3px;
+        }
+        .bk div{
+            /*height:25px;*/
+            line-height: 25px;
+            width: 176px;
+            margin: 1px auto;
+            background-color: #069D8D;
+            color: white;
+            font-size: 12px;
+        }
+        #d_l{
+            background-color: white;
+            color: #3b3b3b;
+            text-indent: 2em;
+            display: none;
+        }
+        #d_l1{
+            background-color: white;
+            color: #3b3b3b;
+            text-indent: 2em;
+            display: none;
+
+        }
+        #d_l2{
+            background-color: white;
+            color: #3b3b3b;
+            text-indent: 2em;
+            display: none;
+
+        }
+        li{
+            list-style: none;
+        }
+        #d_l a{
+            text-decoration: none;
+        }
+        #d_l a:hover{
+            text-decoration: underline;
+        }
+        #d_l1 a{
+            text-decoration: none;
+        }
+        #d_l1 a:hover{
+            text-decoration: underline;
+        }
+        #d_l2 a{
+            text-decoration: none;
+        }
+        #d_l2 a:hover{
+            text-decoration: underline;
+        }
+        table{
+            border:solid 1px #08a7b9;
+            width: 490px;
+            font-size: 12px;
+            margin:25px auto;
+            /*margin-top: 25px;*/
+
+        }
+        tr{
+            border:solid 1px #08a7b9;
+            height: 14px;
+        }
+        td{
+            border:solid 1px #08a7b9;
+            padding: 3px;
+            height: 14px;
+        }
+        th{
+            height: 14px;
+            padding: 3px;
+            text-align: center;
+            color: white;
+            background-color: #00AA98;
+            margin:0 auto ;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+<div class="log_wrap">
+    <div class="log_nav">
+        <img src="logo1.jpg" alt="" style="margin-top: 5px;float: left">
+        <div class="p">
+            <p>您好,游客 </p>
+            <p>[ <a href="#/denglu">马上登陆</a>丨 <a href="#/zhuce">注册账号</a> ]</p>
+        </div>
+        <p class="right_p"><a href="">网站首页</a> | <a href="#">会员中心</a>  | <a href="#/huiyuanliebiao">会员列表</a> </p>
+    </div>
+    <hr>
+    <section>
+        <p>当前位置: <a href="">首页</a> > <a href="">会员中心</a> > 选择注册会员类型  </p>
+        <article>
+            <aside class="asdie_left">
+                <div class="bk">
+                    <div class="zh">
+                        <div id="bk_left1"><img id="img" src="add.gif" alt="">账号</div>
+                        <ul id="d_l">
+                            <li class="hy"><a href="#/denglu">会员登录</a></li>
+                            <li class="zc"><a href="#/zhuce">注册账号</a></li>
+                        </ul>
+                    </div>
+                    <div class="zh">
+                    <div id="bk_left2"><img id="img1" src="add.gif" alt="">投稿</div>
+                        <ul id="d_l1">
+                            <li class="hy"><a href="#/Submission">发布新闻</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="zh">
+                    <div id="bk_left3"><img id="img2" src="add.gif" alt="">商城</div>
+                        <ul id="d_l2">
+                            <li class="hy"><a href="">我的购物车</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <aside class="aside_right" ng-view="">
+                <table>
+                    <tr>
+                        <th>会员登录</th>
+                    </tr>
+                    <tr>
+                        <td>用户名:</td>
+
+                    </tr>
+                    <tr>
+                        <td>密码:</td>
+
+                    </tr>
+                    <tr>
+                        <td>保存时间</td>
+
+                    </tr>
+                    <tr>
+
+                    </tr>
+                </table>
+            </aside>
+        </article>
+        <hr style="background-color: #00AA98;height: 6px; margin-top: 10px" >
+        <p style="text-align: center">Powered by <span style="font-weight: bolder; font-size: 1.2em">EmpireCMS</span>   7.2  © 2002-2015 EmpireSoft Inc.</p>
+    </section>
+
+
+
+
+</div>
+</body>
+<script src="Submission/controllar.js"></script>
+<script src="ajax.js"></script>
+<script src="denglu/controllar.js"></script>
+<script src="zhuce/controllar.js"></script>
+<script src="huiyuanliebiao/controllar.js"></script>
+<script src="information/controllar.js"></script>
+<script src="member/controllar.js"></script>
+<script src="member1/controllar.js"></script>
+<script type="text/javascript">
+    var d_l = document.getElementById("d_l");
+    var d_l1 = document.getElementById("d_l1");
+    var d_l2= document.getElementById("d_l2");
+    var bk_left1 = document.getElementById("bk_left1");
+    var bk_left2 = document.getElementById("bk_left2");
+    var bk_left3 = document.getElementById("bk_left3");
+    var img = document.getElementById("img");
+    var img1 = document.getElementById("img1");
+    var img2= document.getElementById("img2");
+
+    var isChange = true;
+    var isChange1 = true;
+    var isChange2 = true;
+
+    bk_left1.onclick=function () {
+
+        if(isChange){
+            d_l.style.display = "block"
+            img.src = "noadd.gif";
+            img1.src = "add.gif";
+            img2.src = "add.gif";
+            d_l1.style.display = "none"
+            d_l2.style.display = "none"
+            isChange1=true;
+            isChange2=true;
+        }else{
+            d_l.style.display = "none"
+            img.src = "add.gif";
+
+        }
+        isChange=!isChange
+    };
+    bk_left2.onclick=function () {
+
+        if(isChange1){
+            img1.src = "noadd.gif";
+            img.src = "add.gif";
+            img2.src = "add.gif";
+            d_l1.style.display = "block"
+            d_l.style.display = "none"
+            d_l2.style.display = "none"
+            isChange=true;
+            isChange2=true;
+        }else{
+            d_l1.style.display = "none"
+            img1.src = "add.gif";
+
+        }
+        isChange1=!isChange1
+    }
+    bk_left3.onclick=function () {
+
+        if(isChange2){
+            img1.src = "add.gif";
+            img.src = "add.gif";
+            img2.src = "noadd.gif";
+            d_l2.style.display = "block"
+            d_l1.style.display = "none"
+            d_l.style.display = "none"
+            isChange1=true;
+            isChange=true;
+        }else{
+            d_l2.style.display = "none"
+            img2.src = "add.gif";
+
+        }
+        isChange2=!isChange2
+    }
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+//Angular.js 部分
+
+    var myApp = angular.module("myApp",[
+        'ngRoute',
+        'loginReg.Submission',
+        'loginReg.denglu',
+        'loginReg.zhuce',
+        'loginReg.huiyuanliebiao',
+        'loginReg.Submission.infor',
+        'loginReg.zhuce.member',
+        'loginReg.zhuce.member1'
+    ]);
+    myApp.config(['$routeProvider',function ($routeProvider) {
+        $routeProvider.otherwise({
+            redirectTo:'/Submission'
+        })
+    }])
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>
