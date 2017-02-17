@@ -11,7 +11,7 @@ var dl_btn = document.getElementById("dl_btn");
     var pass = document.getElementById("pass");
 
 dl_btn.onclick=function () {
-    ajax("post","http://localhost/kxw/loginReg/logReg.php","key=1&type=1"+"&userName="+user.value+"&passWord="+pass.value,function (data) {
+    ajax("post","http://localhost/0912php/qqqq/loginReg/logReg.php","key=1&type=1"+"&userName="+user.value+"&passWord="+pass.value,function (data) {
         var isJson = JSON.parse(data)
         alert(isJson.res)
         //console.log(data)

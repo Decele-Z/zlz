@@ -42,7 +42,7 @@ if (parseInt(getCookieValue("i"))<4){
 
 
         if (title.value!=""&&textarea.value!=""&&author.value!=""){
-            ajax("post","http://localhost/kxw/loginReg/input.php","key="+getCookieValue("key")+"&title="+title.value+"&img="+imgSrc.value+"&text="+textarea.value+"&author="+author.value+"&date="+ getDate(),function (data) {
+            ajax("post","http://localhost/0912php/qqqq/loginReg/input.php","key="+getCookieValue("key")+"&title="+title.value+"&img="+imgSrc.value+"&text="+textarea.value+"&author="+author.value+"&date="+ getDate(),function (data) {
                 //var isjson= JSON.parse(data);
                 alert(data)
                 //console.log(data);

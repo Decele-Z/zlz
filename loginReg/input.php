@@ -13,7 +13,7 @@ $author = $_POST["author"];
 $date = $_POST["date"];
 
 
-//$sql = "INSERT INTO viewpoint VALUES (NULL,'{$key}','{$title}','{$text}','{$author}','{$date}','{$img}')";
+$sql = "INSERT INTO viewpoint VALUES (NULL,'{$key}','{$title}','{$text}','{$author}','{$date}','{$img}')";
 if ($key == "观点" || $key == "电商" || $key == "传媒" ||$key == "通信"){
     $sql = "INSERT INTO viewpoint VALUES (NULL,'{$key}','{$title}','{$text}','{$author}','{$date}','{$img}')";
 }else if ($key == "创业" || $key == "人物" || $key == "金融" || $key == "投资"){

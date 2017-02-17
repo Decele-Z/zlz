@@ -24,7 +24,7 @@ module.controller('yunyingController',['$scope','$route','$routeParams','$http',
             $route.updateParams({page:page})
         }
     }
-    ajax("post","http://localhost/zlz/news/route1.php","type=4&page="+page,function (data) {
+    ajax("post","http://localhost/0912php/qqqq/news/route1.php","type=4&page="+page,function (data) {
         console.log(data);
         var isJson = JSON.parse(data);
         for (var i=0;i<isJson.length;i++){

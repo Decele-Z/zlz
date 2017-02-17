@@ -21,7 +21,7 @@ module.controller('chuangtouController', ['$scope','$route','$routeParams','$htt
         }
     }
 
-    ajax("post","http://localhost/0912php/git/venture/route.php","type=0",function (data) {
+    ajax("post","http://localhost/0912php/qqqq/venture/route.php","type=0",function (data) {
         var isJson = JSON.parse(data);
         //console.log(isJson);
         //page = 1;

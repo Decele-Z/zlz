@@ -21,7 +21,7 @@ module.controller('touziController', ['$scope','$route','$routeParams','$http', 
         }
     }
 
-    ajax("post","http://localhost/0912php/git/venture/route.php","type=3",function (data) {
+    ajax("post","http://localhost/0912php/qqqq/venture/route.php","type=3",function (data) {
         var isJson = JSON.parse(data);
         //console.log(isJson);
         //page = 1;

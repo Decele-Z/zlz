@@ -21,7 +21,7 @@ module.controller('jingxuanController', ['$scope','$route','$routeParams','$http
         }
     }
 
-    ajax("post","http://localhost/0912php/git/case/route.php","type=0",function (data) {
+    ajax("post","http://localhost/0912php/qqqq/case/route.php","type=0",function (data) {
         var isJson = JSON.parse(data);
         //console.log(isJson);
         //page = 1;

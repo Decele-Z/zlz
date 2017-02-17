@@ -21,7 +21,7 @@ module.controller('dianshangController', ['$scope','$route','$routeParams','$htt
         }
     }
 
-    ajax("post","http://localhost/zlz/viewpoint/route.php","type=1",function (data) {
+    ajax("post","http://localhost/0912php/qqqq/viewpoint/route.php","type=1",function (data) {
         var isJson = JSON.parse(data);
         //console.log(isJson);
         //page = 1;

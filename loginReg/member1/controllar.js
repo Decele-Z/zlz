@@ -22,7 +22,7 @@ module.controller("member1Controller",['$scope',function ($scope) {
         // console.log(repassword2)
         if(username2.value!=""&&password2.value!=""&&repassword2.value!=""&&email2.value!=""){
             if(password2.value==repassword2.value){
-                ajax("post","http://localhost/kxw/loginReg/logReg.php","key=0&type=0"+"&userName="+username2.value+"&passWord="+password2.value+"&email="+email2.value+"&company="+company.value+"&person="+person.value+"&phone="+phone.value,function (data) {
+                ajax("post","http://localhost/0912php/qqqq/loginReg/logReg.php","key=0&type=0"+"&userName="+username2.value+"&passWord="+password2.value+"&email="+email2.value+"&company="+company.value+"&person="+person.value+"&phone="+phone.value,function (data) {
                     var isJson = JSON.parse(data)
                     alert(isJson.res)
                     //console.log(data)

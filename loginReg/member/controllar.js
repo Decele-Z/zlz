@@ -20,12 +20,11 @@ module.controller("memberController",['$scope',function ($scope) {
     pttj.onclick=function () {
         if(username1.value!=""&&password1.value!=""&&repassword1.value!=""&&email1.value!=""){
             if(password1.value==repassword1.value){
-                ajax("post","http://localhost/kxw/loginReg/logReg.php","key=1&type=0"+"&userName="+username1.value+"&passWord="+password1.value+"&email="+email1.value+"&tureName="+turename.value+"&QQ="+qq.value+"&MSN="+msn.value,function (data) {
+                ajax("post","http://localhost/0912php/qqqq/loginReg/logReg.php","key=1&type=0"+"&userName="+username1.value+"&passWord="+password1.value+"&email="+email1.value+"&tureName="+turename.value+"&QQ="+qq.value+"&MSN="+msn.value,function (data) {
                                var isJson = JSON.parse(data)
                                 alert(isJson.res)
                                  //console.log(data)
                 })
-                alert("注册成功")
             }else{
                 alert("两次密码不一致")
             }

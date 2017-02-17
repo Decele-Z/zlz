@@ -21,7 +21,7 @@ module.controller('businessController', ['$scope','$route','$routeParams','$http
         }
     }
 
-    ajax("post","http://localhost/0912php/git/business/route.php","type=0",function (data) {
+    ajax("post","http://localhost/0912php/qqqq/business/route.php","type=0",function (data) {
         var isJson = JSON.parse(data);
         //console.log(isJson);
         //page = 1;
